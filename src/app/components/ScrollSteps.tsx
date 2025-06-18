@@ -24,96 +24,98 @@ const steps = [
 ];
 
 export default function ScrollSteps() {
- const textRef = useRef(null);
-  const sectionRef = useRef(null); // ✅ This fixes the "not defined" error
+  const textRef = useRef(null);
+  const sectionRef = useRef(null);
   const [activeStep, setActiveStep] = useState(0);
 
-useEffect(() => {
-  // Section fade-in (already added)
-  gsap.from(sectionRef.current, {
-    opacity: 0,
-    y: 50,
-    duration: 1,
-    ease: "power2.out",
-    scrollTrigger: {
-      trigger: sectionRef.current,
-      start: "top 80%",
-      toggleActions: "play none none reverse",
-    },
-  });
-
-  // Card-by-card fade in on scroll (mobile & tablet)
-  const cards = gsap.utils.toArray(".fade-card");
-  cards.forEach((card: any, i) => {
-    gsap.from(card, {
+  useEffect(() => {
+    // Fade in entire section
+    gsap.from(sectionRef.current, {
       opacity: 0,
-      y: 40,
-      duration: 0.8,
+      y: 50,
+      duration: 1,
       ease: "power2.out",
       scrollTrigger: {
-        trigger: card,
-        start: "top 90%",
+        trigger: sectionRef.current,
+        start: "top 80%",
         toggleActions: "play none none reverse",
       },
-      delay: i * 0.1,
     });
-  });
 
-  // Scroll-triggered pin (only on xl and up)
-  if (window.innerWidth >= 1280) {
-    const imageTriggers = gsap.utils.toArray(".step-image") as HTMLElement[];
-
-    imageTriggers.forEach((img, index) => {
-      ScrollTrigger.create({
-        trigger: img,
-        start: "top center",
-        end: "bottom center",
-        onEnter: () => setActiveStep(index),
-        onEnterBack: () => setActiveStep(index),
+    // Animate mobile cards one by one
+    const cards = gsap.utils.toArray(".fade-card") as HTMLElement[];
+    cards.forEach((card, i) => {
+      gsap.from(card, {
+        opacity: 0,
+        y: 40,
+        duration: 0.8,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: card,
+          start: "top 90%",
+          toggleActions: "play none none reverse",
+        },
+        delay: i * 0.1,
       });
     });
 
-    ScrollTrigger.create({
-      trigger: textRef.current,
-      start: "top top",
-      end: `+=${window.innerHeight * (steps.length - 1)}`,
-      pin: true,
-      scrub: true,
-    });
+    // Desktop scroll pin only if screen is xl and above
+    if (window.innerWidth >= 1280) {
+      const imageTriggers = gsap.utils.toArray(".step-image") as HTMLElement[];
 
-    return () => ScrollTrigger.getAll().forEach((t) => t.kill());
-  }
-}, []);
+      imageTriggers.forEach((img, index) => {
+        ScrollTrigger.create({
+          trigger: img,
+          start: "top center",
+          end: "bottom center",
+          onEnter: () => setActiveStep(index),
+          onEnterBack: () => setActiveStep(index),
+        });
+      });
 
+      ScrollTrigger.create({
+        trigger: textRef.current,
+        start: "top top",
+        end: `+=${window.innerHeight * (steps.length - 1)}`,
+        pin: true,
+        scrub: true,
+      });
+
+      return () => ScrollTrigger.getAll().forEach((t) => t.kill());
+    }
+  }, []);
 
   return (
-    <section id="section3" className="relative text-black ba-steps py-12">
-      {/* Mobile & tablet view (stacked cards) */}
-     <div className="xl:hidden px-4 space-y-8">
-  {steps.map((step, index) => (
-    <div
-      key={index}
-      className="fade-card rounded-xl shadow-lg overflow-hidden bg-white"
+    <section
+      id="section3"
+      ref={sectionRef}
+      className="relative text-black ba-steps py-12"
     >
-      <img
-        src={step.image}
-        alt={step.title}
-        className="w-full h-48 object-cover"
-      />
-      <div className="p-4">
-        <h3 className="text-xl font-semibold text-primary mb-2">
-          {step.title}
-        </h3>
-        <p className="text-sm text-gray-700">{step.text}</p>
+      {/* Mobile & tablet cards */}
+      <div className="xl:hidden px-4 space-y-8">
+        {steps.map((step, index) => (
+          <div
+            key={index}
+            className="fade-card rounded-xl shadow-lg overflow-hidden bg-white"
+          >
+            <img
+              src={step.image}
+              alt={step.title}
+              className="w-full h-48 object-cover"
+            />
+            <div className="p-4">
+              <h3 className="text-xl font-semibold text-primary mb-2">
+                {step.title}
+              </h3>
+              <p className="text-sm text-gray-700">{step.text}</p>
+            </div>
+          </div>
+        ))}
       </div>
-    </div>
-  ))}
-</div>
 
-
-      {/* Desktop view (animated section) */}
+      {/* Desktop scroll section */}
       <div className="hidden xl:grid xl:grid-cols-2 gap-10 ba-container">
-        {/* Left: Scrollable images */}
+        {/* Left images */}
         <div className="flex flex-col space-y-20 pt-[100px] pb-[100px] image-step mr-[-100px]">
           {steps.map((step, index) => (
             <figure key={index}>
@@ -128,7 +130,7 @@ useEffect(() => {
           ))}
         </div>
 
-        {/* Right: Pinned text */}
+        {/* Right text */}
         <div
           className="sticky top-0 h-screen flex items-center xl:pl-[100px]"
           ref={textRef}
