@@ -8,26 +8,59 @@ gsap.registerPlugin(ScrollTrigger);
 const steps = [
   {
     title: "Escolhe a zona",
-    text: "Ajudamos na escolha da área e melhor solução para instalar a sua Grab&Go, e damos-lhe exclusividade total, onde pode desenvolver a sua atividade e abrir mais lojas. Só necessita de 30 m2 . .",
+    text: "Ajudamos na escolha da área e melhor solução para instalar a sua Grab&Go, e damos-lhe exclusividade total, onde pode desenvolver a sua atividade e abrir mais lojas. Só necessita de 30 m2.",
     image: "/images/service.jpeg",
   },
   {
     title: "Escolhe o pack",
-    text: "Ajudamos na escolha da área e melhor solução para instalar a sua Grab&Go, e damos-lhe exclusividade total, onde pode desenvolver a sua atividade e abrir mais lojas. Só necessita de 30 m2 . .",
+    text: "Ajudamos na escolha da área e melhor solução para instalar a sua Grab&Go, e damos-lhe exclusividade total, onde pode desenvolver a sua atividade e abrir mais lojas. Só necessita de 30 m2.",
     image: "/images/service.jpeg",
   },
   {
     title: "Loja pronta em 1 mês",
-    text: "Ajudamos na escolha da área e melhor solução para instalar a sua Grab&Go, e damos-lhe exclusividade total, onde pode desenvolver a sua atividade e abrir mais lojas. Só necessita de 30 m2 . .",
+    text: "Ajudamos na escolha da área e melhor solução para instalar a sua Grab&Go, e damos-lhe exclusividade total, onde pode desenvolver a sua atividade e abrir mais lojas. Só necessita de 30 m2.",
     image: "/images/service.jpeg",
   },
 ];
 
 export default function ScrollSteps() {
-    const textRef = useRef(null);
+ const textRef = useRef(null);
+  const sectionRef = useRef(null); // ✅ This fixes the "not defined" error
   const [activeStep, setActiveStep] = useState(0);
 
-  useEffect(() => {
+useEffect(() => {
+  // Section fade-in (already added)
+  gsap.from(sectionRef.current, {
+    opacity: 0,
+    y: 50,
+    duration: 1,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: sectionRef.current,
+      start: "top 80%",
+      toggleActions: "play none none reverse",
+    },
+  });
+
+  // Card-by-card fade in on scroll (mobile & tablet)
+  const cards = gsap.utils.toArray(".fade-card");
+  cards.forEach((card: any, i) => {
+    gsap.from(card, {
+      opacity: 0,
+      y: 40,
+      duration: 0.8,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: card,
+        start: "top 90%",
+        toggleActions: "play none none reverse",
+      },
+      delay: i * 0.1,
+    });
+  });
+
+  // Scroll-triggered pin (only on xl and up)
+  if (window.innerWidth >= 1280) {
     const imageTriggers = gsap.utils.toArray(".step-image") as HTMLElement[];
 
     imageTriggers.forEach((img, index) => {
@@ -41,58 +74,82 @@ export default function ScrollSteps() {
     });
 
     ScrollTrigger.create({
-  trigger: textRef.current,
-  start: "top top",
-  end: `+=${window.innerHeight * (steps.length - 1)}`, // pin until last image
-  pin: true,
-  scrub: true,
-});
+      trigger: textRef.current,
+      start: "top top",
+      end: `+=${window.innerHeight * (steps.length - 1)}`,
+      pin: true,
+      scrub: true,
+    });
 
-    return () => ScrollTrigger.getAll().forEach(t => t.kill());
-  }, []);
+    return () => ScrollTrigger.getAll().forEach((t) => t.kill());
+  }
+}, []);
+
 
   return (
-    <>
-    <section id="section3" className="relative text-black  ba-steps">
-      <div className="grid xl:grid-cols-2 gap-10 relative ba-container relative">
+    <section id="section3" className="relative text-black ba-steps py-12">
+      {/* Mobile & tablet view (stacked cards) */}
+     <div className="xl:hidden px-4 space-y-8">
+  {steps.map((step, index) => (
+    <div
+      key={index}
+      className="fade-card rounded-xl shadow-lg overflow-hidden bg-white"
+    >
+      <img
+        src={step.image}
+        alt={step.title}
+        className="w-full h-48 object-cover"
+      />
+      <div className="p-4">
+        <h3 className="text-xl font-semibold text-primary mb-2">
+          {step.title}
+        </h3>
+        <p className="text-sm text-gray-700">{step.text}</p>
+      </div>
+    </div>
+  ))}
+</div>
+
+
+      {/* Desktop view (animated section) */}
+      <div className="hidden xl:grid xl:grid-cols-2 gap-10 ba-container">
         {/* Left: Scrollable images */}
-        <div className="flex flex-col space-y-30 pt-[100px] pb-[100] mr-[-100] image-step">
-            
+        <div className="flex flex-col space-y-20 pt-[100px] pb-[100px] image-step mr-[-100px]">
           {steps.map((step, index) => (
             <figure key={index}>
-  <img
-    src={step.image}
-    
-    alt={step.title}
-    className={`step-image w-full transition-opacity duration-500 ease-in-out ${
-      activeStep === index ? "opacity-100" : "opacity-0"
-    }`}
-  />
-  </figure>
-))}
+              <img
+                src={step.image}
+                alt={step.title}
+                className={`step-image w-full transition-opacity duration-500 ease-in-out ${
+                  activeStep === index ? "opacity-100" : "opacity-0"
+                }`}
+              />
+            </figure>
+          ))}
         </div>
 
         {/* Right: Pinned text */}
-<div className="sticky h-screen flex align-center pt-[100px] pb-[100] xl:pl-[100px]" ref={textRef}>
-  <div className="space-y-15 p-4 h-auto text-step flex flex-col justify-center items-start">
-    {steps.map((step, index) => (
-      <div
-        key={index}
-        className={`transition-opacity duration-300 ${
-          activeStep === index ? "opacity-100" : "opacity-50"
-        }`}
-      >
-        <div className="flex items-center gap-4">
-          <h3 className="text-4xl font-light color-primary mb-4">{step.title}</h3>
+        <div
+          className="sticky top-0 h-screen flex items-center xl:pl-[100px]"
+          ref={textRef}
+        >
+          <div className="space-y-12 p-4 text-step">
+            {steps.map((step, index) => (
+              <div
+                key={index}
+                className={`transition-opacity duration-300 ${
+                  activeStep === index ? "opacity-100" : "opacity-30"
+                }`}
+              >
+                <h3 className="text-4xl font-light text-primary mb-4">
+                  {step.title}
+                </h3>
+                <p className="text-sm text-black max-w-sm">{step.text}</p>
+              </div>
+            ))}
+          </div>
         </div>
-        <p className="text-sm text-black max-w-sm">{step.text}</p>
-      </div>
-    ))}
-  </div>
-</div>
-
       </div>
     </section>
-    </>
   );
 }
