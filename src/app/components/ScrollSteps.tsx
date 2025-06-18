@@ -54,24 +54,27 @@ export default function ScrollSteps() {
   return (
     <>
     <section id="section3" className="relative text-black  ba-steps">
-      <div className="grid md:grid-cols-2 gap-10 relative ba-container">
+      <div className="grid xl:grid-cols-2 gap-10 relative ba-container relative">
         {/* Left: Scrollable images */}
-        <div className="flex flex-col space-y-30 pt-[100px] pb-[100] mr-[-100]">
+        <div className="flex flex-col space-y-30 pt-[100px] pb-[100] mr-[-100] image-step">
+            
           {steps.map((step, index) => (
+            <figure key={index}>
   <img
     src={step.image}
-    key={index}
+    
     alt={step.title}
     className={`step-image w-full transition-opacity duration-500 ease-in-out ${
       activeStep === index ? "opacity-100" : "opacity-0"
     }`}
   />
+  </figure>
 ))}
         </div>
 
         {/* Right: Pinned text */}
-    <div className="sticky h-screen flex align-center pt-[100px] pb-[100] pl-[100]" ref={textRef}>
-  <div className="space-y-15 p-4 h-auto">
+<div className="sticky h-screen flex align-center pt-[100px] pb-[100] xl:pl-[100px]" ref={textRef}>
+  <div className="space-y-15 p-4 h-auto text-step flex flex-col justify-center items-start">
     {steps.map((step, index) => (
       <div
         key={index}

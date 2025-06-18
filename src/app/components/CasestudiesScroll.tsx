@@ -120,13 +120,13 @@ export default function CaseStudiesScroll() {
       {/* Horizontally Scrolling Cards */}
       <div
         ref={horizontalRef}
-        className="flex h-full items-center px-20 absolute gap-5vw top-0 left-0"
-        style={{ width: `${caseStudies.length * 35}vw` }}
+        className="flex h-full items-center px-20 absolute  top-0 left-0"
+        // style={{ width: `${caseStudies.length * 35}vw` }}
       >
         {caseStudies.map((study) => (
           <ServiceCard key={study.id} study={study} />
         ))}
-        <div className="ba-service-card text-white"></div>
+    
       </div>
     </section>
   );

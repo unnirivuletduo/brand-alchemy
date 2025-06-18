@@ -123,8 +123,6 @@ useEffect(() => {
             playsInline
             onCanPlay={() => setVideoReady(true)}
             style={{
-              width: "100%",
-              height: "100%",
               objectFit: "cover",
               transformOrigin: "center center",
             }}
