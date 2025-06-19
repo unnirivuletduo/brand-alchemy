@@ -2,11 +2,15 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
+type Brand = {
+  title: string;
+  image: string;
+};
 type Industry = {
   name: string;
   image: string;
   description: string;
+  brands?: Brand[];
 };
 
 const industries: Industry[] = [
@@ -14,41 +18,73 @@ const industries: Industry[] = [
     name: 'Beauty',
     image: '/images/softwaredevelopment.jpg',
     description: 'We empower beauty brands to shine in a highly competitive and ever-evolving industry by creating digital experiences that are as captivating as the products they offer. From stunning e-commerce platforms to seamless booking systems, personalized customer journeys, and bold branding strategies — we combine elegance, innovation, and performance to elevate beauty businesses across every digital touchpoint.',
+    brands: [
+      { title: 'Glowora', image: '/images/service.jpeg' },
+      { title: 'Angana', image: '/images/service.jpeg' },
+    ],
   },
   {
     name: 'Healthcare',
     image: '/images/printing.jpg',
     description: 'We help healthcare providers, clinics, and wellness brands embrace digital transformation with secure, user-friendly, and compliant solutions. From appointment systems and patient portals to health-tracking apps and virtual consultations, we design tools that improve patient experiences, streamline operations, and build trust in a digitally connected world.',
+    brands: [
+      { title: 'Earthy', image: '/images/service.jpeg' },
+      { title: 'VitalWell', image: '/images/service.jpeg' },
+    ],
   },
   {
     name: 'Fashion',
     image: '/images/softwaredevelopment.jpg',
     description: 'We partner with fashion brands to create bold, immersive digital experiences that reflect their unique identity and trends. From stylish e-commerce storefronts and lookbook galleries to personalized shopping journeys and influencer integrations, we blend aesthetics with technology to help fashion businesses thrive and inspire in the digital age.',
+    brands: [
+      { title: 'Weavique', image: '/images/service.jpeg' },
+      { title: 'Paceon', image: '/images/service.jpeg' },
+    ],
   },
   {
     name: 'Electronics',
     image: '/images/webdevelopment.jpg',
     description: 'We support electronics brands in delivering sleek, high-performance digital experiences that match the innovation of their products. From scalable e-commerce platforms and product configurators to technical support systems and after-sales tools, we build solutions that enhance customer confidence, drive conversions, and reflect the cutting-edge nature of the electronics industry.',
+    brands: [
+      { title: 'Powervac', image: '/images/service.jpeg' },
+    ],
   },
   {
     name: 'Retail',
     image: '/images/printing.jpg',
     description: "We help retail businesses modernize and scale by crafting seamless, omnichannel digital solutions that connect with customers at every touchpoint. Whether it's building fast, intuitive online stores, integrating inventory systems, or enabling personalized shopping experiences, we combine functionality and design to drive growth and customer loyalty in the dynamic world of retail.",
+    brands: [
+      { title: 'Baby Cart', image: '/images/service.jpeg' },
+      { title: 'Mossfell Reserve', image: '/images/service.jpeg' },
+    ],
   },
   {
     name: 'Real Estate',
     image: '/images/webdevelopment.jpg',
     description: "We empower real estate companies to showcase properties and connect with buyers through modern, interactive digital platforms. From immersive property listings and virtual tours to lead management tools and booking systems, we create solutions that simplify the buying journey, build credibility, and help real estate businesses close deals faster in a competitive market.",
+
+    brands: [
+      { title: 'Rental Hub', image: '/images/service.jpeg' },
+    ],
   },
    {
     name: 'Construction',
     image: '/images/softwaredevelopment.jpg',
     description: "We support construction companies in building a powerful digital presence that reflects the strength and precision of their work. From project showcase websites and contractor portals to workflow management tools and on-site collaboration systems, we deliver solutions that streamline operations, boost visibility, and foster trust across clients, partners, and teams.",
+
+    brands: [
+      { title: 'Bworth', image: '/images/service.jpeg' },
+      { title: 'Craft Shed', image: '/images/service.jpeg' },
+    ],
   },
   {
     name: 'Manufacturing',
     image: '/images/printing.jpg',
     description: "We help manufacturing businesses embrace digital transformation with platforms that improve efficiency, visibility, and customer engagement. From smart product catalogs and supply chain integrations to order tracking systems and partner portals, we build robust solutions that support production workflows, strengthen B2B relationships, and drive operational growth in a competitive global market.",
+
+    brands: [
+      { title: 'Chem Power', image: '/images/service.jpeg' },
+    ],
   },
 ];
 
@@ -178,7 +214,26 @@ const handleMouseMove = (index: number, e: React.MouseEvent<HTMLDivElement>) => 
               className="w-full h-[clamp(300px,50vh,600px)] object-cover rounded-xl mb-6"
             />
             <h2 className="text-3xl font-light mb-4">{selected.name}</h2>
-            <p className="text-lg leading-relaxed">{selected.description}</p>
+            <p className="">{selected.description}</p>
+            {selected.brands && selected.brands.length > 0 && (
+  <div className="mt-6">
+    <h3 className="text-xl font-light mb-4">Brands We’ve Worked With</h3>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      {selected.brands.map((brand, index) => (
+        <div key={index} className="rounded-lg overflow-hidden shadow-sm">
+          <img
+            src={brand.image}
+            alt={brand.title}
+            className="w-full h-64 object-cover"
+          />
+          <div className="p-2 text-center   text-black">
+            {brand.title}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+)}
           </motion.div>
         )}
       </AnimatePresence>
