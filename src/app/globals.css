@@ -217,7 +217,11 @@ body {
   color: #000000;
    font-family: 'Bahnschrift';
 }
-
+.ba-wrapper{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
 .ba-container{
   width: 90%;
   margin-left: auto;
