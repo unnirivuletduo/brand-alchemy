@@ -21,7 +21,6 @@ export default function IndustryPage() {
       <ObjectiveSection />
       <ChallengesSection />
       <ProductFinderFeature />
-      {/* Add any additional sections or components as needed */}
       <Footer />
     </>
   );
