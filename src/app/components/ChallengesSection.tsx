@@ -1,10 +1,7 @@
 import { motion } from "framer-motion";
+import { Variants } from "framer-motion";
 
-  const images = [
-    "/images/webdevelopment.jpg", // Replace with your real image paths
-    "/images/softwaredevelopment.jpg",
-  ];
-const imageVariant = {
+const imageVariant: Variants = {
   hidden: { opacity: 0, y: 40 },
   visible: (i: number) => ({
     opacity: 1,
@@ -12,6 +9,11 @@ const imageVariant = {
     transition: { delay: i * 0.2, duration: 0.6, ease: "easeOut" },
   }),
 };
+  const images = [
+    "/images/webdevelopment.jpg", // Replace with your real image paths
+    "/images/softwaredevelopment.jpg",
+  ];
+
 const objectives = [
   {
     title: "Enhance Design & Visual Consistency",
