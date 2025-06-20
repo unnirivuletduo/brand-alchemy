@@ -1,13 +1,6 @@
 import { motion } from "framer-motion";
 
-const imageVariant = {
-  hidden: { opacity: 0, y: 40 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.2, duration: 0.6, ease: "easeOut" },
-  }),
-};
+
 
 
 
@@ -53,7 +46,6 @@ export default function DescriptionSection() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            variants={imageVariant}
             className="w-full overflow-hidden"
           >
             <img
