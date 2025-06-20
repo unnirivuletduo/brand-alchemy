@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import { Variants } from "framer-motion";
 
-const imageVariant: Variants = {
+// Image animation variant with delay based on index
+const imageVariant = {
   hidden: { opacity: 0, y: 40 },
   visible: (i: number) => ({
     opacity: 1,
@@ -9,10 +9,11 @@ const imageVariant: Variants = {
     transition: { delay: i * 0.2, duration: 0.6, ease: "easeOut" },
   }),
 };
-  const images = [
-    "/images/webdevelopment.jpg", // Replace with your real image paths
-    "/images/softwaredevelopment.jpg",
-  ];
+
+const images = [
+  "/images/webdevelopment.jpg",
+  "/images/softwaredevelopment.jpg",
+];
 
 const objectives = [
   {
@@ -31,8 +32,6 @@ const objectives = [
       "The client wished to integrate the ‘book a car care’ option to the website so that the users can schedule care care services via online. This was keenly focused on making the lead generation simpler.",
   },
 ];
-
-
 
 export default function ObjectiveSection() {
   return (
@@ -61,7 +60,7 @@ export default function ObjectiveSection() {
         adopt responsive design, and facilitate improved functionality.
       </motion.p>
 
-      {/* Grid */}
+      {/* Objectives Grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
         {objectives.map((item, i) => (
           <motion.div
@@ -72,31 +71,32 @@ export default function ObjectiveSection() {
             transition={{ duration: 0.6, delay: i * 0.2 }}
             className="space-y-4"
           >
-        
-            <h3 className="font-regular text-lg">{item.title}</h3>
+            <h3 className="font-normal text-lg">{item.title}</h3>
             <p className="leading-relaxed">{item.description}</p>
           </motion.div>
         ))}
       </div>
+
+      {/* Image Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-[80px]">
-              {images.map((src, i) => (
-                <motion.div
-                  key={i}
-                  custom={i}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  variants={imageVariant}
-                  className="w-full overflow-hidden"
-                >
-                  <img
-                    src={src}
-                    alt={`grid-image-${i}`}
-                    className="w-full h-[480px] object-cover"
-                  />
-                </motion.div>
-              ))}
-            </div>
+        {images.map((src, i) => (
+          <motion.div
+            key={i}
+            custom={i}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={imageVariant}
+            className="w-full overflow-hidden"
+          >
+            <img
+              src={src}
+              alt={`grid-image-${i}`}
+              className="w-full h-[480px] object-cover"
+            />
+          </motion.div>
+        ))}
+      </div>
     </section>
   );
 }
