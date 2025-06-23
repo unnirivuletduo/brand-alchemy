@@ -3,7 +3,6 @@ import Header from '../../components/Header';
 import IndustriesBanner from '../../components/IndustriesBanner';
 import Footer from '../../components/Footer';
 import Link from 'next/link';
-import { motion } from "framer-motion";
 
 
 
@@ -14,12 +13,7 @@ export default function IndustryPage() {
 
 <IndustriesBanner />
 
-   <motion.section
-
-   initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1, delay: 0.5 }}
+   <section
 
 
      className="w-full px-6 md:px-20 pt-[100px]">
@@ -61,14 +55,9 @@ export default function IndustryPage() {
             </figure> 
           </div>
         </div>
-      </motion.section>
+      </section>
 
-       <motion.section
-
-   initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1, delay: 0.5 }} className="w-full px-6 md:px-20 pt-[100px]">
+       <section className="w-full px-6 md:px-20 pt-[100px]">
         <div className="flex flex-col md:flex-row md:gap-12">
           {/* Left: Services Provided */}
           <div className="md:w-[40%] w-full flex flex-col space-y-6 mb-10 md:mb-0">
@@ -84,14 +73,9 @@ export default function IndustryPage() {
           </figure>  
           </div>
         </div>
-      </motion.section>
+      </section>
 
-       <motion.section
-
-   initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1, delay: 0.5 }} className="w-full px-6 md:px-20 py-[100px]">
+       <section  className="w-full px-6 md:px-20 py-[100px]">
         <div className="flex flex-col md:flex-row md:gap-12">
           {/* Left: Services Provided */}
           <div className="md:w-[40%] w-full flex flex-col space-y-6 mb-10 md:mb-0">
@@ -121,14 +105,9 @@ export default function IndustryPage() {
 
           </div>
         </div>
-      </motion.section>
+      </section>
 
-       <motion.section
-
-   initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1, delay: 0.5 }} className="w-full px-6 md:px-20 pb-[100px]">
+       <section className="w-full px-6 md:px-20 pb-[100px]">
         <div className="flex flex-col md:flex-row md:gap-12">
           {/* Left: Services Provided */}
           <div className="md:w-[40%] w-full flex flex-col space-y-6 mb-10 md:mb-0">
@@ -157,14 +136,9 @@ export default function IndustryPage() {
         </div>
           </div>
         </div>
-      </motion.section>
+      </section>
 
-       <motion.section
-
-   initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1, delay: 0.5 }} className="w-full px-6 md:px-20 pb-[100px]">
+       <section className="w-full px-6 md:px-20 pb-[100px]">
         <div className="flex flex-col md:flex-row md:gap-12">
           {/* Left: Services Provided */}
           <div className="md:w-[40%] w-full flex flex-col space-y-6 mb-10 md:mb-0">
@@ -195,14 +169,9 @@ export default function IndustryPage() {
         </div>
           </div>
         </div>
-      </motion.section>
+      </section>
 
-       <motion.section
-
-   initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1, delay: 0.5 }} className="w-full px-6 md:px-20 pb-[100px]">
+       <section className="w-full px-6 md:px-20 pb-[100px]">
         <div className="flex flex-col md:flex-row md:gap-12">
           {/* Left: Services Provided */}
           <div className="md:w-[40%] w-full flex flex-col space-y-6 mb-10 md:mb-0">
@@ -240,14 +209,9 @@ export default function IndustryPage() {
         </div>
           </div>
         </div>
-      </motion.section>
+      </section>
 
-       <motion.section
-
-   initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1, delay: 0.5 }} className="w-full px-6 md:px-20 pb-[100px]">
+       <section className="w-full px-6 md:px-20 pb-[100px]">
         <div className="flex flex-col md:flex-row md:gap-12">
           {/* Left: Services Provided */}
           <div className="md:w-[40%] w-full flex flex-col space-y-6 mb-10 md:mb-0">
@@ -268,7 +232,7 @@ export default function IndustryPage() {
           </figure>  
           </div>
         </div>
-      </motion.section>
+      </section>
 
 
 
