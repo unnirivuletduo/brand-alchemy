@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import IndustriesBanner from '../components/IndustriesBanner';
 import Footer from '../components/Footer';
 import Link from 'next/link';
-import ExpandingVideoSection from '../components/ExpandingVideoSection';
+import { motion } from "framer-motion";
 
 export default function IndustryPage() {
   return (
@@ -48,7 +48,7 @@ export default function IndustryPage() {
         </div>
       </section>
 
-      <ExpandingVideoSection />
+    
 
       <section className="w-full px-6 md:px-20 py-[100px]">
         <h3 className="text-3xl font-light leading-snug mb-4">Our Role</h3>
@@ -178,15 +178,50 @@ export default function IndustryPage() {
         </div>
       </section>
 
-      <section className="w-full px-6 md:px-20 pb-[100px]">
-        <h3 className="text-3xl font-light leading-snug mb-4">The Result</h3>
-        <p>
-          Glowora&rsquo;s brand journey went from fragmented and generic to cohesive and premium. Whether viewed on a smartphone, in a customer&rsquo;s hand, or on a 20-foot billboard — the brand now tells one consistent story:
-        </p>
-        <strong>
+
+    <section className="w-full px-6 md:px-20 pb-[100px]">
+      <div className="max-w-5xl mx-auto ">
+
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="text-5xl font-light mb-6"
+        >
+         The Result
+        </motion.h2>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="tleading-relaxed"
+        >
+             Glowora&rsquo;s brand journey went from fragmented and generic to cohesive and premium. Whether viewed on a smartphone, in a customer&rsquo;s hand, or on a 20-foot billboard — the brand now tells one consistent story:
+       <strong>
           Glowora is a modern beauty brand that inspires confidence through clarity, quality, and design.
         </strong>
-      </section>
+        </motion.p>
+        {/* Image */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="w-full h-[480px] overflow-hidden rounded-lg pt-[80px]"
+        >
+       
+          <img
+            src="/images/printing.jpg"
+            alt="Product Finder"
+            className="w-full h-full object-cover"
+          />
+        </motion.div>
+      </div>
+    </section>
+      
 
       <Footer />
     </>
