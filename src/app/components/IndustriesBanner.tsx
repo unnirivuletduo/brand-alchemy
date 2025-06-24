@@ -12,7 +12,7 @@ export default function IndustriesBanner() {
     <div
       className="relative h-[500px] w-full bg-cover bg-center flex items-center justify-center text-white"
       style={{
-        backgroundImage: "url('/images/industry-banner.jpg')", // replace with your image path
+        backgroundImage: "url('/images/glowora/image4.jpeg')", // replace with your image path
       }}
     >
       {/* Overlay (optional for darkening) */}
