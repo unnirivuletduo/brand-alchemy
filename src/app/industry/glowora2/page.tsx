@@ -24,7 +24,7 @@ export default function IndustryPage() {
   return (
     <>
       <Header />
-      <IndustriesBanner />
+      <IndustriesBanner /> 
 
       <motion.section
         className="w-full px-6 md:px-20 py-[100px]"
