@@ -101,7 +101,7 @@ const toggle = (index: number): void => {
     and human connection to create brands that truly resonate.
   </p>
   <p className="text-xl mt-6 text-green-600 italic font-medium">
-    “Because great design doesn’t just look good — it feels right.”
+    “Because great design doesn&apos;t just look good — it feels right.”
   </p>
 </section>
 
@@ -130,8 +130,8 @@ const toggle = (index: number): void => {
         visual identity, and strategic clarity. Every project begins with curiosity and ends with magic.
         <br /><br />
         Ananya believes that every brand has a hidden spark waiting to be discovered. Her approach combines
-        intuition with strategy, ensuring that every identity feels human, honest, and powerful. Whether it’s
-        launching a startup or refreshing an established business, she crafts experiences that don’t just look
+        intuition with strategy, ensuring that every identity feels human, honest, and powerful. Whether it&apos;s
+        launching a startup or refreshing an established business, she crafts experiences that don&apos;t just look
         good — they feel right. Through collaboration, research, and creative soul, she leads brands into their
         most authentic, magnetic form.
       </p>
@@ -159,8 +159,8 @@ const toggle = (index: number): void => {
         visual identity, and strategic clarity. Every project begins with curiosity and ends with magic.
         <br /><br />
         Ananya believes that every brand has a hidden spark waiting to be discovered. Her approach combines
-        intuition with strategy, ensuring that every identity feels human, honest, and powerful. Whether it’s
-        launching a startup or refreshing an established business, she crafts experiences that don’t just look
+        intuition with strategy, ensuring that every identity feels human, honest, and powerful. Whether it&apos;s
+        launching a startup or refreshing an established business, she crafts experiences that don&apos;t just look
         good — they feel right. Through collaboration, research, and creative soul, she leads brands into their
         most authentic, magnetic form.
       </p>
@@ -214,7 +214,7 @@ const toggle = (index: number): void => {
     <h2 className="text-3xl lg:text-4xl font-light mb-4">Why Brands Trust Us</h2>
     <p className="max-w-3xl mx-auto mb-12">
       Trust is earned — not claimed. At Alchemy Project, we blend strategy, creativity, and clarity to create
-      brands that are not only seen but remembered. Here’s why we’ve become the creative partner of choice for many.
+      brands that are not only seen but remembered. Here&apos;s why we&apos;ve become the creative partner of choice for many.
     </p>
 
     <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 text-left">
@@ -230,7 +230,7 @@ const toggle = (index: number): void => {
         <div className="text-3xl text-indigo-600 mb-4">💡</div>
         <h3 className="text-xl font-light mb-2">Creative Soul</h3>
         <p>
-          We don't do generic. Our work is emotionally rich, visually bold, and uniquely you — always custom-built, never templated.
+          We don&apos;t do generic. Our work is emotionally rich, visually bold, and uniquely you — always custom-built, never templated.
         </p>
       </div>
 
@@ -266,7 +266,7 @@ const toggle = (index: number): void => {
         <div>
           <h3 className="text-xl font-light mb-1">Depth Over Trends</h3>
           <p className="text-gray-600">
-            We don’t chase aesthetics. We craft timeless identities that evolve with purpose, not hype.
+            We don&apos;t chase aesthetics. We craft timeless identities that evolve with purpose, not hype.
           </p>
         </div>
         <div>
@@ -303,7 +303,7 @@ const toggle = (index: number): void => {
       <div className="max-w-4xl mx-auto px-6">
         <h2 className="text-3xl lg:text-4xl font-semibold text-center mb-4">Careers</h2>
         <p className="text-gray-600 text-center mb-12">
-          We’re always on the lookout for curious minds and kind collaborators. Explore open roles below.
+          We&apos;re always on the lookout for curious minds and kind collaborators. Explore open roles below.
         </p>
 
         <div className="space-y-6">
