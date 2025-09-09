@@ -58,10 +58,10 @@ export default function IndustryPage() {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-[80px]">
           <div className="w-full overflow-hidden">
-            <Image width="64" height="64" src="/images/glowora/image4.jpeg" className="w-full h-[480px] object-cover" />
+            <Image width="64" height="64" src="/images/glowora/image4.jpeg" alt="image" className="w-full h-[480px] object-cover" />
           </div>
           <div className="w-full overflow-hidden">
-            <Image width="64" height="64" src="/images/glowora/image2.jpeg" className="w-full h-[480px] object-cover" />
+            <Image width="64" height="64" src="/images/glowora/image2.jpeg" alt="image" className="w-full h-[480px] object-cover" />
           </div>
         </div>
       </section>
@@ -73,14 +73,14 @@ export default function IndustryPage() {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-[80px]">
           <div className="w-full overflow-hidden">
-            <Image width="64" height="64" src="/images/glowora/image5.jpeg" className="w-full h-auto object-cover mb-4" />
+            <Image alt="image" width="64" height="64" src="/images/glowora/image5.jpeg" className="w-full h-auto object-cover mb-4" />
             <h4 className="text-2xl font-light leading-snug mb-4">Logo Design</h4>
             <p>
               The logo design phase focused on creating a mark that would be both timeless and flexible — capable of living on packaging, digital screens, and even large outdoor displays. We explored several visual directions before finalizing a clean, modern logo that subtly incorporates themes of light and clarity — the essence of Glowora&rsquo;s name.
             </p>
           </div>
           <div className="w-full overflow-hidden">
-            <Image width="64" height="64" src="/images/glowora/image10.jpeg" className="w-full h-auto object-cover mb-4" />
+            <Image alt="image" width="64" height="64" src="/images/glowora/image10.jpeg" className="w-full h-auto object-cover mb-4" />
             <h4 className="text-2xl font-light leading-snug mb-4">Color Palette & Typography</h4>
             <p>
               Glowora&rsquo;s brand colors were chosen to reflect elegance and femininity — soft neutrals balanced with confident accent tones. We paired these with a typographic system that blends a luxurious serif with a functional modern sans-serif, allowing versatility across both formal and casual brand expressions.
@@ -96,21 +96,21 @@ export default function IndustryPage() {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-[80px]">
           <div className="w-full overflow-hidden">
-            <Image width="64" height="64" src="/images/glowora/image3.jpeg" className="w-full h-auto object-cover mb-4" />
+            <Image alt="image" width="64" height="64" src="/images/glowora/image3.jpeg" className="w-full h-auto object-cover mb-4" />
             <h4 className="text-2xl font-light leading-snug mb-4">Business Card</h4>
             <p>
               We crafted a tactile experience with textured finishes and a minimalist layout, ensuring the card feels like a premium extension of the brand. The design reflects professionalism while adding a hint of creativity through its subtle embossing.
             </p>
           </div>
           <div className="w-full overflow-hidden">
-            <Image width="64" height="64" src="/images/glowora/image2.jpeg" className="w-full h-auto object-cover mb-4" />
+            <Image alt="image" width="64" height="64" src="/images/glowora/image2.jpeg" className="w-full h-auto object-cover mb-4" />
             <h4 className="text-2xl font-light leading-snug mb-4">Newspaper Ad & Bill Sticker</h4>
             <p>
               For traditional media, we created layouts that command attention even in dense, content-rich environments. The ad design combines strong headlines, product visuals, and brand language that convert passive readers into curious prospects.
             </p>
           </div>
           <div className="w-full overflow-hidden">
-            <Image width="64" height="64" src="/images/glowora/image4.jpeg" className="w-full h-auto object-cover mb-4" />
+            <Image alt="image" width="64" height="64" src="/images/glowora/image4.jpeg" className="w-full h-auto object-cover mb-4" />
             <h4 className="text-2xl font-light leading-snug mb-4">Bag & Packaging</h4>
             <p>
               Product packaging was given a clean, minimal makeover — prioritizing user experience, shelf appeal, and brand recognizability. Custom shopping bags with embossed logos and color-matched ribbons were designed to elevate Glowora&rsquo;s retail and gifting experience.
@@ -126,21 +126,21 @@ export default function IndustryPage() {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-[80px]">
           <div className="w-full overflow-hidden">
-            <Image width="64" height="64" src="/images/glowora/image8.jpeg" className="w-full h-auto object-cover mb-4" />
+            <Image alt="image" width="64" height="64" src="/images/glowora/image8.jpeg" className="w-full h-auto object-cover mb-4" />
             <h4 className="text-2xl font-light leading-snug mb-4">Instagram Visual Strategy</h4>
             <p>
               We developed a content grid system for Instagram that maintains visual consistency while supporting a variety of post types — from product launches to behind-the-scenes moments. A mix of bold typography, curated lifestyle photography, and branded icons helped establish Glowora&rsquo;s aesthetic on social.
             </p>
           </div>
           <div className="w-full overflow-hidden">
-            <Image width="64" height="64" src="/images/glowora/image2.jpeg" className="w-full h-auto object-cover mb-4" />
+            <Image alt="image" width="64" height="64" src="/images/glowora/image2.jpeg" className="w-full h-auto object-cover mb-4" />
             <h4 className="text-2xl font-light leading-snug mb-4">Web – Desktop & Mobile View</h4>
             <p>
               For Glowora&rsquo;s web presence, we designed responsive mockups focusing on clean navigation, conversion-focused product sections, and storytelling visuals. Special care was taken to ensure consistency across mobile and desktop layouts — preserving UX clarity across all screens.
             </p>
           </div>
           <div className="w-full overflow-hidden">
-            <Image width="64" height="64" src="/images/glowora/image4.jpeg" className="w-full h-auto object-cover mb-4" />
+            <Image alt="image" width="64" height="64" src="/images/glowora/image4.jpeg" className="w-full h-auto object-cover mb-4" />
             <h4 className="text-2xl font-light leading-snug mb-4">Digital Billboard, Light Box & Bus Stop Display</h4>
             <p>
               We imagined Glowora in the wild — showcasing bold, high-contrast visuals for urban environments. Each piece was tailored to its context: the digital billboard featured motion-ready layouts, while bus stop and light box displays used simplified messages and high-visibility graphics for maximum impact.
@@ -156,21 +156,21 @@ export default function IndustryPage() {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-[80px]">
           <div className="w-full overflow-hidden">
-            <Image width="64" height="64" src="/images/glowora/image8.jpeg" className="w-full h-auto object-cover mb-4" />
+            <Image alt="image" width="64" height="64" src="/images/glowora/image8.jpeg" className="w-full h-auto object-cover mb-4" />
             <h4 className="text-2xl font-light leading-snug mb-4">Product Mockup 1</h4>
             <p>
               Featured Glowora&rsquo;s hero skincare product with a minimalistic label system and recyclable-friendly packaging, photographed under soft lighting to reflect the brand&rsquo;s calming tone.
             </p>
           </div>
           <div className="w-full overflow-hidden">
-            <Image width="64" height="64" src="/images/glowora/image2.jpeg" className="w-full h-auto object-cover mb-4" />
+            <Image alt="image" width="64" height="64" src="/images/glowora/image2.jpeg" className="w-full h-auto object-cover mb-4" />
             <h4 className="text-2xl font-light leading-snug mb-4">Product Mockup 2</h4>
             <p>
               Focused on a vibrant variant of the product line. The mockup captured color psychology in packaging — using a complementary palette that stands out without breaking brand rules.
             </p>
           </div>
           <div className="w-full overflow-hidden">
-            <Image width="64" height="64" src="/images/glowora/image4.jpeg" className="w-full h-auto object-cover mb-4" />
+            <Image alt="image" width="64" height="64" src="/images/glowora/image4.jpeg" className="w-full h-auto object-cover mb-4" />
             <h4 className="text-2xl font-light leading-snug mb-4">Product Mockup 3</h4>
             <p>
               A lifestyle shot placing Glowora products in real-world environments like bathroom counters and travel kits — enhancing relatability and encouraging shareable moments.
