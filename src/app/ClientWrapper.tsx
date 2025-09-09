@@ -8,7 +8,7 @@ export default function ClientWrapper({ children }: { children: React.ReactNode 
     Node.prototype.removeChild = function (child) {
       try {
         return oldRemoveChild.call(this, child);
-      } catch (_e) {
+      } catch {
         return child; // just ignore errors
       }
     };
