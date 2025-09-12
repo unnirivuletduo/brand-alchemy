@@ -24,27 +24,22 @@ export default function ContactPage() {
   const [customIcon, setCustomIcon] = useState<import("leaflet").Icon | null>(null);
 
   // Load Leaflet icon only on client
-useEffect(() => {
-  const loadLeafletIcon = async () => {
-    const L = await import("leaflet");
+  useEffect(() => {
+    const loadLeafletIcon = async () => {
+      const L = await import("leaflet");
 
-    // Safe cast from StaticImageData → unknown → string
-    const iconUrl = (await import("leaflet/dist/images/marker-icon.png")).default as unknown as string;
-    const iconShadow = (await import("leaflet/dist/images/marker-shadow.png")).default as unknown as string;
+      const icon = new L.Icon({
+        iconUrl: "/leaflet/marker-icon.png",   // ✅ served from public/
+        shadowUrl: "/leaflet/marker-shadow.png",
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+      });
 
-    const icon = new L.Icon({
-      iconUrl,
-      shadowUrl: iconShadow,
-      iconSize: [25, 41],
-      iconAnchor: [12, 41],
-    });
+      setCustomIcon(icon);
+    };
 
-    setCustomIcon(icon);
-  };
-
-  loadLeafletIcon();
-}, []);
-
+    loadLeafletIcon();
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
