@@ -15,37 +15,37 @@ gsap.registerPlugin(ScrollTrigger);
 const caseStudies = [
   {
     id: 1,
-    title: "Web Development",
+    title: "Glowora",
     desc: "We create custom digital presences that engage your audience with responsive design, seamless user experience, and optimized performance to ensure your website stands out in today’s competitive market.",
     image: "/images/webdevelopment.jpg",
   },
   {
     id: 2,
-    title: "Software Development",
+    title: "Angana",
     desc: "Providing tailored business solutions through innovative software development that streamlines operations, enhances productivity, and meets your unique enterprise needs.",
     image: "/images/softwaredevelopment.jpg",
   },
   {
     id: 3,
-    title: "Print",
+    title: "Earthy",
     desc: "Delivering creative printed marketing materials including business cards, flyers, and posters that capture your brand’s essence and leave a lasting impression.",
     image: "/images/printing.jpg",
   },
   {
     id: 4,
-    title: "Web Development",
+    title: "VitalWell",
     desc: "We create custom digital presences that engage your audience with responsive design, seamless user experience, and optimized performance to ensure your website stands out in today’s competitive market.",
     image: "/images/webdevelopment.jpg",
   },
   {
     id: 5,
-    title: "Software Development",
+    title: "Weavique",
     desc: "Providing tailored business solutions through innovative software development that streamlines operations, enhances productivity, and meets your unique enterprise needs.",
     image: "/images/softwaredevelopment.jpg",
   },
   {
     id: 6,
-    title: "Print",
+    title: "Paceon",
     desc: "Delivering creative printed marketing materials including business cards, flyers, and posters that capture your brand’s essence and leave a lasting impression.",
     image: "/images/printing.jpg",
   },
