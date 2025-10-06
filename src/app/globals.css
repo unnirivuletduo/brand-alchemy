@@ -331,6 +331,8 @@ body {
   video{
     width: 110%;
     height: 110%;
+    transform: scale(1.2);
+    transform: none!important;
   }
   @media (max-width: 1000px) {
     min-height: 600px;

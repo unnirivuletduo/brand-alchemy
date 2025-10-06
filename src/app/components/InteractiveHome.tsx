@@ -8,22 +8,22 @@ import Image from "next/image";
 gsap.registerPlugin(ScrollTrigger);
 
 const paragraphText =
-  'In the heart of innovation, the Alchemy Project was born — a journey through code, creativity, and transformation that changes everything it touches.';
+  'From conception to growth, we guide brands through every stage. Brand Alchemy builds with you, ensuring your identity thrives across design, digital, and beyond.';
 
 const repeatedSections = [
   {
-    title: 'Create.',
-    paragraph: 'Designing solutions with passion and precision.In the heart of innovation, the Alchemy Project was born — a journey through code, creativity, and transformation that changes everything it touches.',
+    title: 'Own',
+    paragraph: 'Owning a brand means taking control of how the world sees you. At Brand Alchemy, we help you claim that space with clarity, purpose, and confidence. Every detail, from your logo to your voice, is designed to reflect who you are and what you stand for.',
     image: '/images/creative.png',
   },
   {
-    title: 'Develop.',
-    paragraph: 'Building powerful applications that perform flawlessly.In the heart of innovation, the Alchemy Project was born — a journey through code, creativity, and transformation that changes everything it touches.',
+    title: 'Your',
+    paragraph: 'Your brand is more than visuals — it’s your story, your values, and your connection with people. We don’t deliver templates or one-size-fits-all design. Instead, we craft solutions tailored to your journey, ensuring your brand feels personal, authentic, and built around what makes you unique.',
     image: '/images/develop.png',
   },
   {
-    title: 'Launch.',
-    paragraph: 'Taking ideas live to transform the digital landscape.In the heart of innovation, the Alchemy Project was born — a journey through code, creativity, and transformation that changes everything it touches.',
+    title: 'Identity',
+    paragraph: 'Identity is where design and strategy come together. It’s what gives your business recognition, credibility, and influence. We create identities built to endure, evolve, and grow — guiding you from the birth of your brand to every step of its future.',
     image: '/images/launch.png',
   },
 ];

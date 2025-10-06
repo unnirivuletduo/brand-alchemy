@@ -109,7 +109,7 @@ export default function CaseStudiesScroll() {
    <section
   id="section2"
   ref={sectionRef}
-  className="relative w-full h-screen text-black overflow-hidden ba-service-scroll hidden sm:block"
+  className="relative w-full h-screen bg-white text-black overflow-hidden ba-service-scroll hidden sm:block"
 >
       {/* Title */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[-1]">

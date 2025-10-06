@@ -3,11 +3,9 @@ import Header from "./components/Header";
 import Banner from "./components/Banner"; 
 import InteractiveHome from "./components/InteractiveHome";
 import Stacked3DSections from "./components/Stacked3DSections";
-import ScrollSteps from "./components/ScrollSteps";
 import CaseStudiesScroll from "./components/CasestudiesScroll";
 import OurStory from "./components/OurStory";
 import Footer from "./components/Footer";
-import ScrollVideo from "./components/ScrollVideo";
 
 export default function Home() {
   return (
@@ -16,10 +14,8 @@ export default function Home() {
 <Banner />
 <InteractiveHome />
 <Stacked3DSections />
-<ScrollSteps />
 <CaseStudiesScroll />
 <OurStory />
-<ScrollVideo />
 <Footer />
    </>
   );
