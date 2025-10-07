@@ -99,14 +99,20 @@ export default function Footer() {
           <div className="mb-4 md:mb-0">Brand Alchemy © 2025 All rights reserved</div>
           {/* Social Icons */}
           <div className="flex justify-center gap-6 text-m text-white mb-4 md:mb-0">
-          <Link className="text-gray-400 cursor-pointer" href="http://www.linkedin.com/company/brandalchemynz"><FaLinkedin  /></Link>
-          <Link className="text-gray-400 cursor-pointer" href="https://www.youtube.com/@brandalchemy_nz"><FaYoutube /></Link>
-          <Link className="text-gray-400 cursor-pointer" href="https://www.instagram.com/brand.alchemy.nz/"><FaInstagram /></Link>
           <Link className="text-gray-400 cursor-pointer" href="https://www.facebook.com/brandalchemy.nz"><FaFacebook /></Link>
+          <Link className="text-gray-400 cursor-pointer" href="https://www.instagram.com/brand.alchemy.nz/"><FaInstagram /></Link>
+          <Link className="text-gray-400 cursor-pointer" href="http://www.linkedin.com/company/brandalchemynz"><FaLinkedin  /></Link>
           <Link className="text-gray-400 cursor-pointer" href="https://nz.pinterest.com/brandalchemy_nz"><FaPinterest /></Link>
           <Link className="text-gray-400 cursor-pointer" href="https://www.threads.com/@brand.alchemy.nz"><ThreadsIcon /></Link>
           <Link className="text-gray-400 cursor-pointer" href="https://x.com/brandalchemynz"><XIcon /></Link>
           <Link className="text-gray-400 cursor-pointer" href="https://www.tiktok.com/@brand.alchemy.nz"><SiTiktok /></Link>
+          <Link className="text-gray-400 cursor-pointer" href="https://www.youtube.com/@brandalchemy_nz"><FaYoutube /></Link>
+          
+          
+          
+          
+          
+          
         </div>
           <div className="flex gap-4">
             <Link href="#">Privacy Policy</Link>

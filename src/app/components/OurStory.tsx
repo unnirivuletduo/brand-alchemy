@@ -53,7 +53,7 @@ export default function OurStory() {
 
 
   return (
-    <section className="flex align-center py-20 ba-our-story" ref={logoRef}>
+    <section className="flex align-center bg-white py-20 ba-our-story" ref={logoRef}>
 
 
       <div className="ba-container grid grid-cols-1 md:grid-cols-2 gap-10 items-center py-10">
