@@ -611,8 +611,9 @@ a{
   padding-top: calc(100vh + 100px);
 }
 .threadsIcon{
-  height: 23px;
-  width: 23px;
+  width: 21px;
+  height: 21px;
+  margin-top: -3px;
   opacity: .7;
 }
 .h-1remw-1rem{
