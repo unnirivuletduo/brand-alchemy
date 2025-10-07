@@ -11,7 +11,7 @@ const sections = [
   {
     id: 1,
     title: 'Branding',
-    video: '/videos/branding.mp4',
+    video: '/videos/branding-new.mp4',
     description: 'We craft logos, visual identities, and full brand experiences that resonate and build lasting recognition.',
     items: [
       { icon: 'FaPenNib', label: 'Logo Design' },
@@ -47,7 +47,7 @@ const sections = [
   {
     id: 3,
     title: 'Ads',
-    video: '/videos/designing.mp4',
+    video: '/videos/ads.mp4',
     description: 'High-performance ad campaigns and creatives across all major platforms to reach and convert your audience.',
     items: [
       { icon: 'FaFacebook', label: 'Facebook Ads' },
@@ -83,7 +83,7 @@ const sections = [
   {
     id: 5,
     title: 'Print',
-    video: '/videos/print.mp4',
+    video: '/videos/printing.mp4',
     description: 'Professional print collateral that supports your brand at every touchpoint, from business cards to banners.',
     items: [
       { icon: 'FaAddressCard', label: 'Business Cards' },
@@ -101,7 +101,7 @@ const sections = [
   {
     id: 6,
     title: 'Video Commercial',
-    video: '/videos/videomarketing.mp4',
+    video: '/videos/videocommercial.mp4',
     description: 'Engaging video content that communicates your brand story and drives attention across multiple channels.',
     items: [
       { icon: 'FaFilm', label: 'Brand Story Videos' },
