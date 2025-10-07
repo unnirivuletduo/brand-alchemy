@@ -55,10 +55,12 @@ export default function Header() {
             <ul className="flex items-center">
               <li><Link href="#">Home</Link></li>
               <li><Link href="#">Services</Link></li>
-              <li><Link href="#">Solutions</Link></li>
               <li><Link href="#">Industries</Link></li>
-              <li><Link href="#">Works</Link></li>
-              <li><Link href="#">About</Link></li>
+              <li><Link href="#">About Us</Link></li>
+              <li><Link href="#">Blogs</Link></li>
+              
+              <li><Link href="#">Careers</Link></li>
+              
               <li><Link href="#">Contact</Link></li>
             </ul>
           </nav>
@@ -149,13 +151,15 @@ export default function Header() {
             <div>
               <h3 className="text-xl font-semibold mb-4">Company</h3>
               <ul className="space-y-2 text-gray-300">
-                <li><Link href="#">About</Link></li>
-                <li><Link href="#">Services</Link></li>
-                <li><Link href="#">Industries</Link></li>
-                <li><Link href="#">Works</Link></li>
-                <li><Link href="#">Careers</Link></li>
-                <li><Link href="#">Blogs</Link></li>
-                <li><Link href="#">Contact</Link></li>
+                <li><Link href="#">Home</Link></li>
+              <li><Link href="#">Services</Link></li>
+              <li><Link href="#">Industries</Link></li>
+              <li><Link href="#">About Us</Link></li>
+              <li><Link href="#">Blogs</Link></li>
+              
+              <li><Link href="#">Careers</Link></li>
+              
+              <li><Link href="#">Contact</Link></li>
               </ul>
             </div>
 
@@ -175,11 +179,8 @@ export default function Header() {
             <div>
               <h3 className="text-xl font-semibold mb-4">Connect</h3>
               <ul className="space-y-2 text-gray-300">
-                <li>General Enquiry: +91 480 2733 111</li>
-                {/*<li>Sales Enquiry: +91 480 2733 555</li>*/}
+                <li>General Enquiry : <Link href="tel:+64 20 446 6444">+64 20 446 6444</Link></li>
                 <li>Email: <Link href="mailto:rohith@brandalchemy.co.nz">rohith@brandalchemy.co.nz</Link></li>
-                {/*<li>HR Enquiry: +91 480 2733 999</li>*/}
-                {/*<li>WhatsApp: +91 8606 483 399</li>*/}
               </ul>
             </div>
           </div>
