@@ -170,9 +170,9 @@ export default function IndustryPage() {
   <section
     key={i}
     ref={(el) => { sectionRefs.current[i] = el; }}
-    className={`relative w-full flex flex-col ${
+    className={`relative w-full flex flex-col video-service-section ${
       i % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
-    } justify-between px-6 lg:px-20 pt-[150px] bg-white`}
+    } justify-between px-6 lg:px-20 sm:pt-[150px] pt-[50px] bg-white`}
   >
     {/* Text Side */}
     <motion.div
