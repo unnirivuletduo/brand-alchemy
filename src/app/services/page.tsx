@@ -185,7 +185,7 @@ export default function IndustryPage() {
       <h2 className="text-3xl lg:text-4xl font-light mb-8">{section.title}</h2>
       <p className='text-lg'>{section.description}</p>
       <Link
-        href="/services/branding/"
+        href="#"
         className="inline-flex items-center gap-3 arrow-btn-black mt-5"
       >
         Explore {section.title}{' '}

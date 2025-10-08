@@ -53,8 +53,8 @@ export default function Header() {
         <div className="flex items-center gap-10">
           <nav>
             <ul className="flex items-center">
-              <li><Link href="#">Home</Link></li>
-              <li><Link href="#">Services</Link></li>
+              <li><Link href="/">Home</Link></li>
+              <li><Link href="/services/">Services</Link></li>
               <li><Link href="#">Industries</Link></li>
               <li><Link href="#">About Us</Link></li>
               <li><Link href="#">Blogs</Link></li>
@@ -151,8 +151,8 @@ export default function Header() {
             <div>
               <h3 className="text-xl font-semibold mb-4">Company</h3>
               <ul className="space-y-2 text-gray-300">
-                <li><Link href="#">Home</Link></li>
-              <li><Link href="#">Services</Link></li>
+                <li><Link href="/">Home</Link></li>
+              <li><Link href="/services/">Services</Link></li>
               <li><Link href="#">Industries</Link></li>
               <li><Link href="#">About Us</Link></li>
               <li><Link href="#">Blogs</Link></li>

@@ -47,8 +47,8 @@ export default function Footer() {
           <div>
             <h3 className="font-light text-2xl mb-4">Company</h3>
             <ul className="space-y-2 text-gray-400">
-              <li><Link href="#">Home</Link></li>
-              <li><Link href="#">Services</Link></li>
+              <li><Link href="/">Home</Link></li>
+              <li><Link href="/services/">Services</Link></li>
               <li><Link href="#">Industries</Link></li>
               <li><Link href="#">About Us</Link></li>
               <li><Link href="#">Blogs</Link></li>
