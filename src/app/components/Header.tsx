@@ -91,13 +91,13 @@ export default function Header() {
             aria-label="Menu"
           >
             <span
-              className={`h-1 bg-white rounded transition-all duration-300 ${open ? 'rotate-45 translate-y-3' : ''}`}
+              className={`h-1 bg-white rounded transition-all duration-300 w-full ${open ? 'rotate-45 translate-y-3' : ''}`}
             />
             <span
-              className={`h-1 bg-white rounded transition-all duration-300 ${open ? 'opacity-0' : ''}`}
+              className={`h-1 bg-white rounded transition-all duration-300 w-full ${open ? 'opacity-0' : ''}`}
             />
             <span
-              className={`h-1 bg-white rounded transition-all duration-300 ${open ? '-rotate-45 -translate-y-3' : ''}`}
+              className={`h-1 bg-white rounded transition-all duration-300 w-full ${open ? '-rotate-45 -translate-y-3' : ''}`}
             />
           </button>
 
