@@ -190,7 +190,7 @@ export default function IndustryPage() {
         whileInView="visible"
         viewport={{ once: true }}
       >
-        <Image width="1000" height="1000" className="rounded-lg" src="/images/glowora/image4.jpeg" alt="Glowora project" />
+        <Image width="1000" height="1000" className="rounded-lg" src="/images/glowora/image1222.png" alt="Glowora project" />
       </motion.figure>
     </motion.div>
   </div>
@@ -216,28 +216,13 @@ export default function IndustryPage() {
       viewport={{ once: true }}
     >
       <motion.div
-        className="p-5 grid grid-cols-1 md:grid-cols-2 gap-6 pt-[150px] pb-[150px] rounded-lg"
-        style={{ backgroundColor: '#f896c5' }}
+        className="rounded-lg"
         variants={fadeInUp}
         custom={1}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
       >
-        <motion.div
-          className="w-full overflow-hidden"
-          variants={fadeInUp}
-          custom={2}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          <Image width="1000" height="1000" 
-            src="/images/glowora/image5.jpeg"
-            className="w-full h-auto object-cover mb-4 rounded-lg"
-            alt="Glowora visual 1"
-          />
-        </motion.div>
 
         <motion.div
           className="w-full overflow-hidden"
@@ -248,8 +233,8 @@ export default function IndustryPage() {
           viewport={{ once: true }}
         >
           <Image width="1000" height="1000" 
-            src="/images/glowora/image10.jpeg"
-            className="w-full h-auto object-cover mb-4 rounded-lg"
+            src="/images/glowora/image1333.png"
+            className="w-full h-auto object-cover rounded-lg"
             alt="Glowora visual 2"
           />
         </motion.div>
@@ -507,8 +492,7 @@ export default function IndustryPage() {
       viewport={{ once: true }}
     >
       <motion.div
-        className="p-5 grid grid-cols-1 md:grid-cols-2 gap-6 pt-[150px] pb-[150px] rounded-lg"
-        style={{ backgroundColor: '#b04f84' }}
+        className="rounded-lg overflow-hidden"
         variants={fadeInUp}
         custom={8}
         initial="hidden"
@@ -524,24 +508,9 @@ export default function IndustryPage() {
           viewport={{ once: true }}
         >
           <Image width="1000" height="1000" 
-            src="/images/glowora/image8.jpeg"
-            className="w-full h-auto object-cover mb-4 rounded-lg"
+            src="/images/glowora/image111.png"
+            className="w-full h-auto object-cover rounded-lg"
             alt="Instagram Visual"
-          />
-        </motion.div>
-
-        <motion.div
-          className="w-full overflow-hidden"
-          variants={fadeInUp}
-          custom={10}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          <Image width="1000" height="1000" 
-            src="/images/glowora/image2.jpeg"
-            className="w-full h-auto object-cover mb-4 rounded-lg"
-            alt="Web Design"
           />
         </motion.div>
       </motion.div>
@@ -565,22 +534,10 @@ export default function IndustryPage() {
       custom={0}
     >
       <motion.div
-        className="p-5 grid grid-cols-1 md:grid-cols-2 gap-6 pt-[150px] pb-[150px] rounded-lg"
-        style={{ backgroundColor: 'rgb(228, 135, 189)' }}
+        className="rounded-lg"
         variants={fadeInUp}
         custom={1}
       >
-        <motion.div
-          className="w-full overflow-hidden"
-          variants={fadeInUp}
-          custom={2}
-        >
-          <Image width="1000" height="1000" 
-            src="/images/glowora/image4.jpeg"
-            className="w-full h-auto object-cover mb-4 rounded-lg"
-            alt="Product Mockup 1"
-          />
-        </motion.div>
 
         <motion.div
           className="w-full overflow-hidden"
@@ -589,7 +546,7 @@ export default function IndustryPage() {
         >
           <Image width="1000" height="1000" 
             src="/images/glowora/image2.jpeg"
-            className="w-full h-auto object-cover mb-4 rounded-lg"
+            className="w-full h-auto object-cover rounded-lg"
             alt="Product Mockup 2"
           />
         </motion.div>
@@ -695,7 +652,7 @@ export default function IndustryPage() {
 
     {/* Images */}
     <motion.div
-      className="p-5 grid grid-cols-1 md:grid-cols-2 gap-6 pt-[150px] pb-[150px] rounded-lg mt-5"
+      className="p-5 pb-1 grid grid-cols-1 md:grid-cols-2 gap-4 rounded-lg mt-5"
       style={{ backgroundColor: '#b04f84' }}
       variants={fadeInUp}
       custom={3}
@@ -706,10 +663,16 @@ export default function IndustryPage() {
         custom={4}
       >
         <Image width="1000" height="1000" 
-          src="/images/glowora/image8.jpeg"
+          src="/images/glowora/i444.webp"
           className="w-full h-auto object-cover mb-4 rounded-lg"
           alt="Result Image 1"
         />
+        <Image width="1000" height="1000" 
+          src="/images/glowora/image10.jpeg"
+          className="w-full h-auto object-cover mb-4 rounded-lg"
+          alt="Result Image 1"
+        />
+        
       </motion.div>
 
       <motion.div
@@ -718,10 +681,22 @@ export default function IndustryPage() {
         custom={5}
       >
         <Image width="1000" height="1000" 
-          src="/images/glowora/image2.jpeg"
+          src="/images/glowora/image11.jpeg"
           className="w-full h-auto object-cover mb-4 rounded-lg"
           alt="Result Image 2"
         />
+        <Image width="1000" height="1000" 
+          src="/images/glowora/image9.jpeg"
+          className="w-full h-auto object-cover mb-4 rounded-lg"
+          alt="Result Image 2"
+        />
+      <Link
+                href="#"
+                className="inline-flex items-center gap-3 arrow-btn-white text-white mt-5"
+              >
+                View Live Website{" "}
+                <Image width="64" height="64" src="/arrow_right_white.svg" alt="arrow" />
+              </Link>
       </motion.div>
     </motion.div>
   </motion.div>
