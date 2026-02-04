@@ -61,6 +61,10 @@ export default async function BlogDetailPage({
     blog-content
     prose prose-lg max-w-none
 
+    [&_.has-text-align-center]:text-center
+    [&_.has-text-align-right]:text-right
+    [&_.has-text-align-left]:text-left
+
     [&_h2]:text-3xl [&_h2]:font-semibold [&_h2]:mt-10 [&_h2]:mb-4
     [&_h3]:text-2xl [&_h3]:font-semibold [&_h3]:mt-8 [&_h3]:mb-3
     [&_h4]:text-xl [&_h4]:font-semibold [&_h4]:mt-6 [&_h4]:mb-2
@@ -87,6 +91,7 @@ export default async function BlogDetailPage({
   "
   dangerouslySetInnerHTML={{ __html: post.content.rendered }}
 />
+
 
       </div>
 
