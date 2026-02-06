@@ -1,53 +1,44 @@
+"use client";
+
 import { motion } from "framer-motion";
+import Image from "next/image";
 
-
-const title =
-    "Glowora – A Brand Reimagined";
-
-  const words = title.split(" ");
-
-
-export default function IndustriesBanner() {
+export default function IndustryBanner({
+  title,
+  image,
+}: {
+  title?: string;
+  image?: string | null;
+}) {
   return (
-    <div
-      className="relative h-[500px] w-full bg-cover bg-center flex items-center justify-center text-white"
-      style={{
-        backgroundImage: "url('/images/glowora/image4.jpeg')", // replace with your image path
-      }}
-    >
-      {/* Overlay (optional for darkening) */}
-      <div className="absolute w-full inset-0 bg-black" style={{opacity:.5}} />
+    <div className="relative">
+    <div className="relative w-full h-[clamp(300px,60vh,600px)] overflow-hidden flex items-center justify-center px-6 text-white pt-[100px]">
 
-      {/* Main Content */}
-      <div className="relative ba-container">
-        <h1 className="text-4xl md:text-6xl font-light pt-10 mx-auto leading-tight">
-          {words.map((word, index) => (
-          <span key={index} className="overflow-hidden inline-block">
-            <motion.span
-              className="inline-block"
-              initial={{ y: 50, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{
-                duration: 1,
-                delay: index * 0,
-                ease: "easeOut",
-              }}
-            >
-              {word}&nbsp;
-            </motion.span>
-          </span>
-        ))}
-    </h1>
-  
+      <div className="absolute inset-0 z-0">
+        {image && (
+          <Image
+            src={image}
+            alt={title || "Industry banner"}
+            fill
+            className="object-cover"
+          />
+        )}
+        <div className="absolute inset-0 bg-black/50" />
       </div>
 
-      {/* Industry Text at bottom left */}
-      <div className="absolute bottom-10 w-full   left-0 text-2xl">
-        <div className="ba-container">
-        <p className="text-white  ">Industry</p>
-        <p className="text-white text-lg ">Beauty / Wellness / Cosmetics</p>
-        </div>
+     
+      <div className="absolute bottom-10 w-full   left-0 text-2xl"><div className="ba-container"><p className="text-white  ">Industry</p><p className="text-white text-lg ">Beauty / Wellness / Cosmetics</p></div>
       </div>
     </div>
+
+     <div className="absolute top-1/2 -translate-y-1/2 z-10 text-5xl font-light text-white w-full">
+      <div className="ba-container">
+        <h1 className="text-4xl md:text-6xl font-light pt-10 mx-auto leading-tight">{title}</h1>
+      </div>
+      </div>
+      </div>
+
+
   );
 }
+

@@ -1,8 +1,13 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   images: {
-    domains: ["api.brandalchemy.co.nz"],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'api.brandalchemy.co.nz',
+        pathname: '**',
+      },
+    ],
   },
 };
 
