@@ -27,6 +27,7 @@ export default function IndustryOverviewSection({
   overview?: {
     title?: string;
     content?: string;
+    services_provided?: string; // ✅ added this
   } | null;
   liveSite?: {
     title?: string;
@@ -35,6 +36,13 @@ export default function IndustryOverviewSection({
   } | null;
 }) {
   if (!overview) return null;
+
+  // ✅ Move services logic INSIDE component
+  const services =
+    overview.services_provided
+      ?.split(",")
+      .map((service) => service.trim())
+      .filter(Boolean) || [];
 
   return (
     <motion.section
@@ -58,28 +66,16 @@ export default function IndustryOverviewSection({
             Services Provided
           </motion.h2>
 
-          <motion.div
-            className="flex flex-wrap gap-3"
-            variants={fadeInUp}
-            transition={{ delay: 0.3 }}
-          >
-            {[
-              "Full-Scale Brand Identity",
-              "Visual Rollout",
-              "Digital Marketing",
-              "Business Card",
-              "Web Development",
-            ].map((service, i) => (
-              <motion.span
+          <div className="flex flex-wrap gap-3">
+            {services.map((service, i) => (
+              <span
                 key={i}
                 className="border border-black px-4 py-1 rounded-full text-sm"
-                variants={fadeInUp}
-                transition={{ delay: 0.4 + i * 0.1 }}
               >
                 {service}
-              </motion.span>
+              </span>
             ))}
-          </motion.div>
+          </div>
         </motion.div>
 
         {/* RIGHT SIDE */}

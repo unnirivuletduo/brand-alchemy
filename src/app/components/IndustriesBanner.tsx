@@ -6,9 +6,11 @@ import Image from "next/image";
 export default function IndustryBanner({
   title,
   image,
+  categories,
 }: {
   title?: string;
   image?: string | null;
+  categories?: string[];
 }) {
   return (
     <div className="relative">
@@ -27,7 +29,10 @@ export default function IndustryBanner({
       </div>
 
      
-      <div className="absolute bottom-10 w-full   left-0 text-2xl"><div className="ba-container"><p className="text-white  ">Industry</p><p className="text-white text-lg ">Beauty / Wellness / Cosmetics</p></div>
+      <div className="absolute bottom-10 w-full   left-0 text-2xl"><div className="ba-container"><p className="text-white  ">Industry</p><p className="text-white text-lg">
+        {categories?.join(" / ")}
+      </p>
+      </div>
       </div>
     </div>
 

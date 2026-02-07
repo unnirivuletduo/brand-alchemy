@@ -12,6 +12,18 @@ export async function getIndustryPost(slug: string) {
 
   const post = data[0];
 
+  // Extract Industry taxonomy terms
+let industryCategories: string[] = [];
+
+if (post._embedded?.["wp:term"]) {
+  const allTerms = post._embedded["wp:term"].flat();
+
+  industryCategories = allTerms
+    .filter((term: any) => term.taxonomy === "industry_category")
+    .map((term: any) => term.name);
+}
+
+
   // Main featured image (still using _embed)
   const featuredImage =
     post?._embedded?.["wp:featuredmedia"]?.[0]?.source_url || null;
@@ -70,11 +82,12 @@ const resultImages = [
     title: post?.title?.rendered || null,
     content: post?.content?.rendered || null,
     image: featuredImage,
+    categories: industryCategories,
 
     // ACF
-    overview: post.acf?.overview ?? null,
     enableOverview: post.acf?.enable_overview ?? false,
     liveSite: post.acf?.live_site_url ?? null,
+    overview: post.acf?.overview ?? null,
     enableOurRole: post.acf?.enable_our_role ?? false,
     ourRole: {
       title: post.acf?.our_role?.title ?? "",

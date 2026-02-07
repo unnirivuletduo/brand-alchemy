@@ -47,6 +47,7 @@ export default async function IndustryDetailPage({
       <IndustriesBanner
         title={post.title}
         image={post.image}
+        categories={post.categories}
       />
 
       {post.enableOverview && (
