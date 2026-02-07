@@ -2,6 +2,11 @@ import Header from "../../components/Header";
 import IndustriesBanner from "../../components/IndustriesBanner";
 import IndustryOverviewSection from "../../components/IndustryOverviewSection";
 import OurRoleSection from "../../components/OurRoleSection";
+import BrandIdentitySection from "../../components/BrandIdentitySection";
+import PrintPackagingSection from "../../components/PrintPackagingSection";
+import DigitalExperienceSection from "../../components/DigitalExperienceSection";
+import ProductMockupsSection from "../../components/ProductMockupsSection";
+import ResultSection from "../../components/ResultSection";
 import Footer from "../../components/Footer";
 import FloatingButton from "../../components/FloatingButton";
 import { getIndustryPost } from "@/lib/getIndustryPost";
@@ -50,11 +55,35 @@ export default async function IndustryDetailPage({
     liveSite={post.liveSite}
   />
 )}
+      {post.enableOurRole && (
 <OurRoleSection
   title={post.ourRole.title}
   content={post.ourRole.content}
   image={post.ourRole.image}
 />
+)}
+      {post.enableBrandIdentity && (
+  <BrandIdentitySection
+    data={post.brandIdentity}
+  />
+)}
+{post.enablePrintPackaging && (
+  <PrintPackagingSection data={post.printPackaging} />
+)}
+{post.enableDigitalExperience && (
+  <DigitalExperienceSection
+    data={post.digitalExperience}
+  />
+)}
+{post.enableProductMockups && (
+  <ProductMockupsSection
+    data={post.productMockups}
+  />
+)}
+{post.enableResult && (
+  <ResultSection data={post.result} />
+)}
+
 
     <FloatingButton />
     <Footer />
