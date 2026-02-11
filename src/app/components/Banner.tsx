@@ -122,7 +122,7 @@ useEffect(() => {
             loop
             playsInline
             onCanPlay={() => setVideoReady(true)}
-            poster="/images/poster.png"
+            poster="/images/poster.jpeg"
             style={{
               objectFit: "cover",
               transformOrigin: "center center",
