@@ -53,48 +53,45 @@ export default function ContactPage() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-    setSubmitted(false);
+    const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setLoading(true);
 
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(form),
+  try {
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: form.name,
+        email: form.email,
+        phone: form.phone,
+        message: form.message,
+        website: "" // honeypot
+      }),
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setSubmitted(true);
+      setForm({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
       });
-
-      let data: any = null;
-
-      try {
-        data = await res.json();
-      } catch {
-        console.error("Response is not valid JSON");
-      }
-
-      if (res.ok) {
-        setSubmitted(true);
-        setForm({
-          name: "",
-          email: "",
-          phone: "",
-          message: "",
-        });
-      } else {
-        console.error("Server error:", data);
-        alert(data?.message || "Something went wrong. Please try again.");
-      }
-
-    } catch (error) {
-      console.error("Network error:", error);
-      alert("Error sending message.");
-    } finally {
-      setLoading(false);
     }
-  };
+
+  } catch (error) {
+    console.error("Submission error:", error);
+  }
+
+  setLoading(false);
+};
+
+
 
   return (
     <>
