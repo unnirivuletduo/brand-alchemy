@@ -10,7 +10,7 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 
 export const metadata: Metadata = {
   title: {
-    default: "Brand Alchemy",
+    default: "Brand Alchemy - Creative. Design. Brand Agency Auckland",
     template: "%s – Brand Alchemy",
   },
   description: "Creative. Design. Brand Agency Auckland",
