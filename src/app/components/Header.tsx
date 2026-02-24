@@ -55,13 +55,13 @@ export default function Header() {
             <ul className="flex items-center">
               <li><Link href="/">Home</Link></li>
               <li><Link href="/services/">Services</Link></li>
-              <li><Link href="#">Industries</Link></li>
+              <li><Link href="/industry/">Industries</Link></li>
               <li><Link href="#">About Us</Link></li>
               <li><Link href="#">Blogs</Link></li>
               
               <li><Link href="#">Careers</Link></li>
               
-              <li><Link href="#">Contact</Link></li>
+              <li><Link href="/contact/">Contact</Link></li>
             </ul>
           </nav>
           <button
@@ -153,13 +153,13 @@ export default function Header() {
               <ul className="space-y-2 text-gray-300">
                 <li><Link href="/">Home</Link></li>
               <li><Link href="/services/">Services</Link></li>
-              <li><Link href="#">Industries</Link></li>
+              <li><Link href="/industry/">Industries</Link></li>
               <li><Link href="#">About Us</Link></li>
               <li><Link href="#">Blogs</Link></li>
               
               <li><Link href="#">Careers</Link></li>
               
-              <li><Link href="#">Contact</Link></li>
+              <li><Link href="/contact/">Contact</Link></li>
               </ul>
             </div>
 
