@@ -1,4 +1,3 @@
-// app/layout.tsx
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
@@ -39,6 +38,32 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               'https://connect.facebook.net/en_US/fbevents.js');
               fbq('init', '370606434427552');
               fbq('track', 'PageView');
+            `,
+          }}
+        />
+
+        {/* Metricool Tracker */}
+        <Script
+          id="metricool-tracker"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              function loadScript(a){
+                var b=document.getElementsByTagName("head")[0],
+                c=document.createElement("script");
+                c.type="text/javascript";
+                c.src="https://tracker.metricool.com/resources/be.js";
+                c.onreadystatechange=a;
+                c.onload=a;
+                b.appendChild(c)
+              }
+              loadScript(function(){
+                if (window.beTracker) {
+                  window.beTracker.t({
+                    hash:"204a6b1bad1a8f3193e0b7da2c07237f"
+                  });
+                }
+              });
             `,
           }}
         />
