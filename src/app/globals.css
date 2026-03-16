@@ -307,7 +307,7 @@ body {
     }
   }
   ul{
-    gap: 3.5vw;
+    gap: 5.5vw;
   }
   nav{
     @media (max-width: 991px) {

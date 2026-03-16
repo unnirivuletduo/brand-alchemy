@@ -56,16 +56,16 @@ export default function Header() {
               <li><Link href="/">Home</Link></li>
               <li><Link href="/services/">Services</Link></li>
               <li><Link href="/industry/">Industries</Link></li>
-              <li><Link href="#">About Us</Link></li>
+              <li className="hidden"><Link href="#">About Us</Link></li>
               <li><Link href="#">Blogs</Link></li>
               
-              <li><Link href="#">Careers</Link></li>
+              <li className="hidden"><Link href="#">Careers</Link></li>
               
               <li><Link href="/contact/">Contact</Link></li>
             </ul>
           </nav>
           <button
-            className="flex flex-col justify-between w-8 h-6 cursor-pointer group ba-menu-btn"
+            className="flex lg:hidden flex-col justify-between w-8 h-6 cursor-pointer group ba-menu-btn"
             onClick={() => setOpen(!open)}
             aria-label="Menu"
           >
@@ -85,8 +85,17 @@ export default function Header() {
       {/*<AnimatePresence>*/}
       {open && (
         <div className="fixed h-screen left-0 top-0 w-screen bg-black text-white shadow-lg py-10 overflow-y-auto">
+        <Link href="/" className="logo-ba ">
+          <Image 
+           className="pl-5"
+            src="/logo.png"
+            alt="Brand Alchemy Logo"
+            width={100}
+            height={100}
+          />
+        </Link>
           <button
-            className="flex flex-col justify-between w-8 h-6 cursor-pointer group ba-menu-btn absolute top-10 right-10"
+            className="flex flex-col justify-between w-8 h-6 cursor-pointer group ba-menu-btn absolute top-13 right-10"
             onClick={() => setOpen(!open)}
             aria-label="Menu"
           >
@@ -101,41 +110,41 @@ export default function Header() {
             />
           </button>
 
-          <div className="ba-container pt-20 mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-20">
+          <div className="ba-container pt-13 mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-5">
             {/* All your column content remains unchanged */}
             {/* Column 2 */}
             <div>
-              <h3 className="text-xl font-semibold mb-4">Services</h3>
-              <ul className="space-y-2 text-gray-300">
-              <li><Link href="#">Branding</Link></li>
-              <li><Link href="#">Marketing</Link></li>
-              <li><Link href="#">Ads</Link></li>
-              <li><Link href="#">Website</Link></li>
-              <li><Link href="#">Print</Link></li>
-              <li><Link href="#">Video Commercial</Link></li>
-              <li><Link href="#">Software Development</Link></li>
+              <h3 className="text-xl font-semibold mb-6">Services</h3>
+              <ul className="space-y-3 text-gray-300">
+              <li><Link href="/services/">Branding</Link></li>
+              <li><Link href="/services/">Marketing</Link></li>
+              <li><Link href="/services/">Ads</Link></li>
+              <li><Link href="/services/">Website</Link></li>
+              <li><Link href="/services/">Print</Link></li>
+              <li><Link href="/services/">Video Commercial</Link></li>
+              <li><Link href="/services/">Software Development</Link></li>
               </ul>
             </div>
 
             {/* Column 3 */}
             <div>
-              <h3 className="text-xl font-semibold mb-4">Industries</h3>
-              <ul className="space-y-2 text-gray-300">
-                <li><Link href="#">Beauty</Link></li>
-                <li><Link href="#">Healthcare</Link></li>
-                <li><Link href="#">Fashion</Link></li>
-                <li><Link href="#">Electronics</Link></li>
-                <li><Link href="#">Retail</Link></li>
-                <li><Link href="#">Real Estate</Link></li>
-                <li><Link href="#">Construction</Link></li>
-                <li><Link href="#">Manufacturing</Link></li>
+              <h3 className="text-xl font-semibold mb-6">Industries</h3>
+              <ul className="space-y-3 text-gray-300">
+              <li><a href="/industry/">Beauty</a></li>
+              <li><a href="/industry/">Healthcare</a></li>
+              <li><a href="/industry/">Fashion</a></li>
+              <li><a href="/industry/">Electronics</a></li>
+              <li><a href="/industry/">Retail</a></li>
+              <li><a href="/industry/">Real Estate</a></li>
+              <li><a href="/industry/">Construction</a></li>
+              <li><a href="/industry/">Manufacturing</a></li>
               </ul>
             </div>
 
             {/* Column 5 */}
-            <div>
-              <h3 className="text-xl font-semibold mb-4">Solutions</h3>
-              <ul className="space-y-2 text-gray-300">
+            <div className="hidden">
+              <h3 className="text-xl font-semibold mb-6">Solutions</h3>
+              <ul className="space-y-3 text-gray-300">
                 <li><Link href="#">E-commerce Development</Link></li>
                 <li><Link href="#">Custom Web Apps</Link></li>
                 <li><Link href="#">Mobile Apps</Link></li>
@@ -149,24 +158,24 @@ export default function Header() {
 
             {/* Column 1 */}
             <div>
-              <h3 className="text-xl font-semibold mb-4">Company</h3>
-              <ul className="space-y-2 text-gray-300">
-                <li><Link href="/">Home</Link></li>
+              <h3 className="text-xl font-semibold mb-6">Company</h3>
+              <ul className="space-y-3 text-gray-300">
+               <li><Link href="/">Home</Link></li>
               <li><Link href="/services/">Services</Link></li>
               <li><Link href="/industry/">Industries</Link></li>
-              <li><Link href="#">About Us</Link></li>
-              <li><Link href="#">Blogs</Link></li>
+              <li className="hidden"><Link href="#">About Us</Link></li>
+              <li className="hidden"><Link href="/blog/">Blogs</Link></li>
               
-              <li><Link href="#">Careers</Link></li>
+              <li className="hidden"><Link href="#">Careers</Link></li>
               
               <li><Link href="/contact/">Contact</Link></li>
               </ul>
             </div>
 
             {/* Column 6 */}
-            <div>
-              <h3 className="text-xl font-semibold mb-4">Other</h3>
-              <ul className="space-y-2 text-gray-300"> 
+            <div className="hidden">
+              <h3 className="text-xl font-semibold mb-6">Other</h3>
+              <ul className="space-y-3 text-gray-300"> 
                 <li><Link href="#">Partnership</Link></li>
                 <li><Link href="#">Awards and Recognitions</Link></li>
                 <li><Link href="#">Insights</Link></li>
@@ -177,10 +186,10 @@ export default function Header() {
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold mb-4">Connect</h3>
+              <h3 className="text-xl font-semibold mb-6">Connect</h3>
               <ul className="space-y-2 text-gray-300">
-                <li>General Enquiry : <Link href="tel:+64 20 446 6444">+64 20 446 6444</Link></li>
-                <li>Email: <Link href="mailto:rohith@brandalchemy.co.nz">rohith@brandalchemy.co.nz</Link></li>
+                <li><Link href="tel:+64 20 446 6444">+64 20 446 6444</Link></li>
+                <li><Link href="mailto:rohith@brandalchemy.co.nz"><small>rohith@brandalchemy.co.nz</small></Link></li>
               </ul>
             </div>
           </div>

@@ -44,46 +44,52 @@ export default function Footer() {
 
         {/* Main footer links */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-sm mb-16">
+         
+
           <div>
-            <h3 className="font-light text-2xl mb-4">Company</h3>
+            <h3 className="font-light text-2xl mb-4">Industries</h3>
             <ul className="space-y-2 text-gray-400">
-              <li><Link href="/">Home</Link></li>
-              <li><Link href="/services/">Services</Link></li>
-              <li><Link href="/industry/">Industries</Link></li>
-              <li><Link href="#">About Us</Link></li>
-              <li><Link href="#">Blogs</Link></li>
-              
-              <li><Link href="#">Careers</Link></li>
-              
-              <li><Link href="/contact/">Contact</Link></li>
+              <li><a href="/industry/">Beauty</a></li>
+              <li><a href="/industry/">Healthcare</a></li>
+              <li><a href="/industry/">Fashion</a></li>
+              <li><a href="/industry/">Electronics</a></li>
+              <li><a href="/industry/">Retail</a></li>
+              <li><a href="/industry/">Real Estate</a></li>
+              <li><a href="/industry/">Construction</a></li>
+              <li><a href="/industry/">Manufacturing</a></li>
+
             </ul>
           </div>
 
           <div>
             <h3 className="font-light text-2xl mb-4">Services</h3>
             <ul className="space-y-2 text-gray-400">
-              <li><Link href="#">Branding</Link></li>
-              <li><Link href="#">Marketing</Link></li>
-              <li><Link href="#">Ads</Link></li>
-              <li><Link href="#">Website</Link></li>
-              <li><Link href="#">Print</Link></li>
-              <li><Link href="#">Video Commercial</Link></li>
-              <li><Link href="#">Software Development</Link></li>
+              <li><Link href="/services/">Branding</Link></li>
+              <li><Link href="/services/">Marketing</Link></li>
+              <li><Link href="/services/">Ads</Link></li>
+              <li><Link href="/services/">Website</Link></li>
+              <li><Link href="/services/">Print</Link></li>
+              <li><Link href="/services/">Video Commercial</Link></li>
+              <li><Link href="/services/">Software Development</Link></li>
             </ul>
           </div>
 
-          <div>
-            <h3 className="font-light text-2xl mb-4">Other</h3>
+           <div>
+            <h3 className="font-light text-2xl mb-4">Company</h3>
             <ul className="space-y-2 text-gray-400">
-              <li><Link href="#">Partnership</Link></li>
-              <li><Link href="#">Awards and Recognitions</Link></li>
-              <li><Link href="#">Insights</Link></li>
-              <li><Link href="#">Resource Augmentation</Link></li>
-              <li><Link href="#">Testimonials</Link></li>
-              <li><Link href="#">Our Clients</Link></li>
-              <li><Link href="#">Sitemap</Link></li>
+              <li><Link href="/">Home</Link></li>
+              <li><Link href="/services/">Services</Link></li>
+              <li><Link href="/industry/">Industries</Link></li>
+              <li className="hidden"><Link href="#">About Us</Link></li>
+              <li className="hidden"><Link href="/blog/">Blogs</Link></li>
+              
+              <li className="hidden"><Link href="#">Careers</Link></li>
+              
+              <li><Link href="/contact/">Contact</Link></li>
             </ul>
           </div>
+
+          
 
           <div className="col-span-2 md:col-span-1 lg:col-span-1">
             <h3 className="font-light text-2xl mb-4">Connect</h3>
