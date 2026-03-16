@@ -113,8 +113,8 @@ export default function Header() {
           <div className="ba-container pt-13 mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-5">
             {/* All your column content remains unchanged */}
             {/* Column 2 */}
-            <div>
-              <h3 className="text-xl font-semibold mb-6">Services</h3>
+            <div className="mb-4">
+              <h3 className="text-xl font-semibold mb-4">Services</h3>
               <ul className="space-y-3 text-gray-300">
               <li><Link href="/services/">Branding</Link></li>
               <li><Link href="/services/">Marketing</Link></li>
@@ -127,8 +127,8 @@ export default function Header() {
             </div>
 
             {/* Column 3 */}
-            <div>
-              <h3 className="text-xl font-semibold mb-6">Industries</h3>
+            <div className="mb-4">
+              <h3 className="text-xl font-semibold mb-4">Industries</h3>
               <ul className="space-y-3 text-gray-300">
               <li><a href="/industry/">Beauty</a></li>
               <li><a href="/industry/">Healthcare</a></li>
@@ -143,7 +143,7 @@ export default function Header() {
 
             {/* Column 5 */}
             <div className="hidden">
-              <h3 className="text-xl font-semibold mb-6">Solutions</h3>
+              <h3 className="text-xl font-semibold mb-4">Solutions</h3>
               <ul className="space-y-3 text-gray-300">
                 <li><Link href="#">E-commerce Development</Link></li>
                 <li><Link href="#">Custom Web Apps</Link></li>
@@ -157,8 +157,8 @@ export default function Header() {
             </div>
 
             {/* Column 1 */}
-            <div>
-              <h3 className="text-xl font-semibold mb-6">Company</h3>
+            <div className="mb-4">
+              <h3 className="text-xl font-semibold mb-4">Company</h3>
               <ul className="space-y-3 text-gray-300">
                <li><Link href="/">Home</Link></li>
               <li><Link href="/services/">Services</Link></li>
@@ -174,7 +174,7 @@ export default function Header() {
 
             {/* Column 6 */}
             <div className="hidden">
-              <h3 className="text-xl font-semibold mb-6">Other</h3>
+              <h3 className="text-xl font-semibold mb-4">Other</h3>
               <ul className="space-y-3 text-gray-300"> 
                 <li><Link href="#">Partnership</Link></li>
                 <li><Link href="#">Awards and Recognitions</Link></li>
@@ -185,8 +185,8 @@ export default function Header() {
               </ul>
             </div>
 
-            <div>
-              <h3 className="text-xl font-semibold mb-6">Connect</h3>
+            <div className="mb-4">
+              <h3 className="text-xl font-semibold mb-4">Connect</h3>
               <ul className="space-y-2 text-gray-300">
                 <li><Link href="tel:+64 20 446 6444">+64 20 446 6444</Link></li>
                 <li><Link href="mailto:rohith@brandalchemy.co.nz"><small>rohith@brandalchemy.co.nz</small></Link></li>
