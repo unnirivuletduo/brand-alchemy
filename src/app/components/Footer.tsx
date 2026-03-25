@@ -95,7 +95,7 @@ export default function Footer() {
             <h3 className="font-light text-2xl mb-4">Connect</h3>
             <ul className="space-y-2 text-gray-400">
               <li>General Enquiry : <Link href="tel:+64 20 446 6444">+64 20 446 6444</Link></li>
-              <li>Email : <Link href="mailto:rohith@brandalchemy.co.nz">rohith@brandalchemy.co.nz</Link> </li>
+              <li>Email : <Link href="mailto:info@brandalchemy.co.nz">info@brandalchemy.co.nz</Link> </li>
             </ul>
           </div>
         </div>
