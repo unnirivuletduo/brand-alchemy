@@ -44,6 +44,32 @@ export function toSiteUrls(text: string) {
   return text.replace(WP_PAGE_URL, SITE_URL);
 }
 
+// WordPress page slug → Next.js route, for routes whose SEO is managed
+// through a WordPress page of the same slug.
+export const STATIC_PAGES: Record<string, string> = {
+  home: "/",
+  about: "/about",
+  services: "/services",
+  branding: "/services/branding",
+  contact: "/contact",
+  careers: "/careers",
+  blog: "/blog",
+  industry: "/industry",
+};
+
+/**
+ * Maps a WordPress URL from a Yoast sitemap to its Next.js route, so links
+ * are right whatever the WordPress permalink settings are. Returns null for
+ * URLs with no matching route on the site.
+ */
+export function wpUrlToPath(type: "post" | "page" | "industry", wpUrl: string) {
+  const slug = new URL(wpUrl).pathname.split("/").filter(Boolean).pop() ?? "";
+
+  if (type === "post") return slug ? `/blog/${slug}` : null;
+  if (type === "industry") return slug ? `/industry/${slug}` : null;
+  return slug ? (STATIC_PAGES[slug] ?? null) : "/";
+}
+
 // WordPress titles arrive HTML-encoded (e.g. "&#8217;").
 function decodeEntities(text: string) {
   return text

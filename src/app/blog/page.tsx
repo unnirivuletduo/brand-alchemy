@@ -1,3 +1,4 @@
+import { PageSchema } from '../components/JsonLd';
 import Link from 'next/link';
 import Image from 'next/image';
 import Header from '../components/Header';
@@ -20,6 +21,7 @@ export default async function BlogPage() {
 
   return (
     <>
+      <PageSchema slug="blog" path="/blog" />
       <Header />
 
       {/* Banner (unchanged) */}

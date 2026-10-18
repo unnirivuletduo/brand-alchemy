@@ -80,6 +80,7 @@ const resultImages = [
 
   return {
     slug: post.slug as string,
+    link: post.link as string,
     title: post?.title?.rendered || null,
     content: post?.content?.rendered || null,
     excerpt: post?.excerpt?.rendered || null,

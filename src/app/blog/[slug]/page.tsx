@@ -53,7 +53,7 @@ export default async function BlogDetailPage({
 
   return (
     <>
-      <JsonLd schema={post.yoast_head_json?.schema} />
+      <JsonLd schema={post.yoast_head_json?.schema} wpLink={post.link} path={`/blog/${post.slug}`} />
       <Header />
 
       <div className="relative w-full h-[clamp(300px,60vh,600px)] overflow-hidden flex items-center justify-center px-6 text-white pt-[100px]">

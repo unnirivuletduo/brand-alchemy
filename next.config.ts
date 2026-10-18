@@ -16,7 +16,7 @@ const nextConfig = {
       { source: '/sitemap.xml', destination: '/api/sitemap/sitemap_index.xml' },
       { source: '/sitemap_index.xml', destination: '/api/sitemap/sitemap_index.xml' },
       { source: '/:file(.+-sitemap\\d*\\.xml)', destination: '/api/sitemap/:file' },
-      { source: '/main-sitemap.xsl', destination: 'https://api.brandalchemy.co.nz/main-sitemap.xsl' },
+      { source: '/main-sitemap.xsl', destination: 'https://api.brandalchemy.co.nz/wp-content/plugins/wordpress-seo/css/main-sitemap.xsl' },
     ];
   },
 };

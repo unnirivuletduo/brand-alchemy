@@ -1,3 +1,4 @@
+import { PageSchema } from "../components/JsonLd";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import IndustryHoverSection from "../components/IndustryHoverSection";
@@ -19,6 +20,7 @@ export default async function IndustryPage() {
 
   return (
     <>
+      <PageSchema slug="industry" path="/industry" />
       <Header />
       <IndustryBanner />
       <IndustryHoverSection industries={industries} />

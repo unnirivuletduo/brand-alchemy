@@ -1,3 +1,4 @@
+import { PageSchema } from "./components/JsonLd";
 
 import Header from "./components/Header";
 import Banner from "./components/Banner"; 
@@ -20,6 +21,7 @@ export function generateMetadata() {
 export default function Home() {
   return (
    <>
+      <PageSchema slug="home" path="/" />
 <Header />
 <Banner />
 <InteractiveHome />

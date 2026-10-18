@@ -64,7 +64,7 @@ export default async function IndustryDetailPage({
 
   return (
     <>
-      <JsonLd schema={post.yoast?.schema} />
+      <JsonLd schema={post.yoast?.schema} wpLink={post.link} path={`/industry/${post.slug}`} />
       <Header />
 
       <IndustriesBanner

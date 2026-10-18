@@ -1,4 +1,5 @@
 import { pageMetadata } from "@/lib/seo";
+import { PageSchema } from "@/app/components/JsonLd";
 
 export function generateMetadata() {
   return pageMetadata("about", "/about", {
@@ -9,5 +10,10 @@ export function generateMetadata() {
 }
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  return children;
+  return (
+    <>
+      <PageSchema slug="about" path="/about" />
+      {children}
+    </>
+  );
 }
