@@ -11,6 +11,9 @@ import Footer from "../../components/Footer";
 import FloatingButton from "../../components/FloatingButton";
 import { getIndustryPost } from "@/lib/getIndustryPost";
 import { notFound } from "next/navigation";
+import JsonLd from "../../components/JsonLd";
+import { buildMetadata, stripHtml, truncate } from "@/lib/seo";
+import type { Metadata } from "next";
 import { motion, Variants } from 'framer-motion';
 
 
@@ -27,6 +30,25 @@ const fadeInUp: Variants = {
   }),
 };
 
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const post = await getIndustryPost(slug);
+
+  if (!post) {
+    return { title: "Not found", robots: { index: false } };
+  }
+
+  return buildMetadata(`/industry/${post.slug}`, post.yoast, {
+    title: stripHtml(post.title ?? ""),
+    description: truncate(stripHtml(post.excerpt ?? post.overview?.content ?? "")),
+    image: post.image,
+  });
+}
+
 export default async function IndustryDetailPage({
   params,
 }: {
@@ -42,6 +64,7 @@ export default async function IndustryDetailPage({
 
   return (
     <>
+      <JsonLd schema={post.yoast?.schema} />
       <Header />
 
       <IndustriesBanner

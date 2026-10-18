@@ -3,6 +3,15 @@ import Image from 'next/image';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { getPosts } from '@/lib/wordpress';
+import { pageMetadata } from '@/lib/seo';
+
+export function generateMetadata() {
+  return pageMetadata('blog', '/blog', {
+    title: 'Insights & Articles',
+    description:
+      'Branding, design and marketing insights and articles from the Brand Alchemy team.',
+  });
+}
 
 const title = 'Insights & Articles';
 
