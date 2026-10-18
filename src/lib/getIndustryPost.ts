@@ -79,8 +79,12 @@ const resultImages = [
 
 
   return {
+    slug: post.slug as string,
+    link: post.link as string,
     title: post?.title?.rendered || null,
     content: post?.content?.rendered || null,
+    excerpt: post?.excerpt?.rendered || null,
+    yoast: post?.yoast_head_json ?? null,
     image: featuredImage,
     categories: industryCategories,
 

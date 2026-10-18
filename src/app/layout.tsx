@@ -3,16 +3,27 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import ClientWrapper from "./ClientWrapper";
+import { SITE_NAME, SITE_URL } from "@/lib/seo";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "Brand Alchemy - Creative. Design. Brand Agency New Zeland",
+    default: "Brand Alchemy - Creative. Design. Brand Agency New Zealand",
     template: "%s – Brand Alchemy",
   },
-  description: "Creative. Design. Brand Agency New Zeland",
+  description: "Creative. Design. Brand Agency New Zealand",
+  openGraph: {
+    siteName: SITE_NAME,
+    locale: "en_NZ",
+    type: "website",
+    images: [{ url: "/images/poster.jpeg" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
   icons: {
     icon: "/favicon.ico",
   },
@@ -20,7 +31,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en-NZ">
       <head>
         {/* Meta Pixel Code */}
         <Script

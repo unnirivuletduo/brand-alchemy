@@ -1,7 +1,29 @@
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import Image from "next/image";
+import JsonLd from "@/app/components/JsonLd";
 import { getPostBySlug } from "@/lib/wordpress";
+import { buildMetadata, stripHtml, truncate } from "@/lib/seo";
+import type { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const post = await getPostBySlug(slug);
+
+  if (!post) {
+    return { title: "Blog post not found", robots: { index: false } };
+  }
+
+  return buildMetadata(`/blog/${post.slug}`, post.yoast_head_json, {
+    title: stripHtml(post.title.rendered),
+    description: truncate(stripHtml(post.excerpt?.rendered ?? "")),
+    image: post._embedded?.["wp:featuredmedia"]?.[0]?.source_url,
+  });
+}
 
 export default async function BlogDetailPage({
   params,
@@ -31,6 +53,7 @@ export default async function BlogDetailPage({
 
   return (
     <>
+      <JsonLd schema={post.yoast_head_json?.schema} wpLink={post.link} path={`/blog/${post.slug}`} />
       <Header />
 
       <div className="relative w-full h-[clamp(300px,60vh,600px)] overflow-hidden flex items-center justify-center px-6 text-white pt-[100px]">
