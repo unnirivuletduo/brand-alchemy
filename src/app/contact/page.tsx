@@ -8,6 +8,34 @@ import dynamic from "next/dynamic";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import "leaflet/dist/leaflet.css";
+import {
+  FaEnvelope,
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaPhone,
+  FaPinterestP,
+  FaThreads,
+  FaTiktok,
+  FaXTwitter,
+  FaYoutube,
+} from "react-icons/fa6";
+
+const contactDetails = [
+  { label: "General Enquiry", value: "+64 20 446 6444", href: "tel:+64204466444", Icon: FaPhone },
+  { label: "Email", value: "info@brandalchemy.co.nz", href: "mailto:info@brandalchemy.co.nz", Icon: FaEnvelope },
+];
+
+const socialLinks = [
+  { name: "Facebook", href: "https://www.facebook.com/brandalchemy.nz", Icon: FaFacebookF },
+  { name: "Instagram", href: "https://www.instagram.com/brand.alchemy.nz/", Icon: FaInstagram },
+  { name: "LinkedIn", href: "https://www.linkedin.com/company/brandalchemynz", Icon: FaLinkedinIn },
+  { name: "Pinterest", href: "https://nz.pinterest.com/brandalchemy_nz", Icon: FaPinterestP },
+  { name: "Threads", href: "https://www.threads.com/@brand.alchemy.nz", Icon: FaThreads },
+  { name: "X", href: "https://x.com/brandalchemynz", Icon: FaXTwitter },
+  { name: "TikTok", href: "https://www.tiktok.com/@brand.alchemy.nz", Icon: FaTiktok },
+  { name: "YouTube", href: "https://www.youtube.com/@brandalchemy_nz", Icon: FaYoutube },
+];
 
 // Dynamically import react-leaflet components (client-side only)
 const MapContainer = dynamic(() => import("react-leaflet").then(mod => mod.MapContainer), { ssr: false });
@@ -116,14 +144,54 @@ export default function ContactPage() {
 
       {/* Form Section */}
       <div className="min-h-screen bg-white text-black px-6 lg:px-20 py-20">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-6xl mx-auto grid gap-12 lg:grid-cols-[2fr_3fr] lg:gap-20">
+
+        {/* Contact details */}
+        <div>
           <h1 className="text-4xl font-light mb-6">Get in Touch</h1>
-          <p className="text-gray-600 mb-12">
-            We’d love to hear from you. Whether you have a question, a project idea, or just want to say hello — drop us a message below.
+          <p className="text-gray-600 mb-10">
+            We’d love to hear from you. Whether you have a question, a project idea, or just want to say hello — drop us a message.
           </p>
+
+          <ul className="space-y-4 mb-10">
+            {contactDetails.map(({ label, value, href, Icon }) => (
+              <li key={label}>
+                <a
+                  href={href}
+                  className="flex items-center gap-4 p-5 border border-gray-200 rounded-lg hover:border-black transition"
+                >
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-black text-white">
+                    <Icon />
+                  </span>
+                  <span className="min-w-0">
+                    <span className="block text-sm text-gray-500">{label}</span>
+                    <span className="block text-lg break-words">{value}</span>
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
+
+          <p className="text-sm text-gray-500 mb-4">Follow us</p>
+          <ul className="flex flex-wrap gap-3">
+            {socialLinks.map(({ name, href, Icon }) => (
+              <li key={name}>
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={name}
+                  title={name}
+                  className="flex h-11 w-11 items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-black hover:text-white hover:border-black transition"
+                >
+                  <Icon />
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
 
-        <form onSubmit={handleSubmit} className="max-w-3xl mx-auto space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-6">
 
           {/* Name */}
           <div>
@@ -220,6 +288,7 @@ export default function ContactPage() {
           )}
 
         </form>
+        </div>
       </div>
 
       {/* Map */}
