@@ -205,7 +205,7 @@ export default function ServicesContent() {
   href="#"
   className="flex items-center justify-between group transition-all duration-300"
 >
-  <span>{item}</span>
+  <h3>{item}</h3>
   <span
     className="ml-2 transform translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300"
   >
