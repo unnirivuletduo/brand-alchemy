@@ -65,9 +65,9 @@ export default function IndustrySection({
             viewport={{ once: true, amount: 0.2 }}
           >
             <div className="flex items-center justify-between text-[clamp(1.5rem,3vw,4rem)] font-light group gap-4 relative">
-              <span className="transition-all duration-200 group-hover:pl-2">
+              <h2 className="transition-all duration-200 group-hover:pl-2">
                 {item.name}
-              </span>
+              </h2>
 
               <div className="w-[380px] h-[80px] absolute top-1/2 left-1/2 -translate-y-2/2">
                 <AnimatePresence>
@@ -121,17 +121,17 @@ export default function IndustrySection({
               className="w-full h-[clamp(300px,50vh,600px)] object-cover rounded-xl mb-6"
             />
 
-            <h2 className="text-3xl font-light mb-4">
+            <h3 className="text-3xl font-light mb-4">
               {selected.name}
-            </h2>
+            </h3>
 
             <p>{selected.description}</p>
 
             {posts.length > 0 && (
               <div className="mt-6">
-                <h3 className="text-xl font-light mb-4">
+                <h4 className="text-xl font-light mb-4">
                   Brands We’ve Worked With
-                </h3>
+                </h4>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {posts.map((post, index) => (
