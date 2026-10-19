@@ -26,7 +26,8 @@ export default function IndustryBanner() {
       </div>
 
       {/* Title Animation */}
-      <motion.div
+      <motion.h1
+        aria-label={title}
         className="relative z-10 text-[clamp(2rem,4vw,5rem)] font-light text-center flex flex-wrap justify-center"
         initial="hidden"
         animate="visible"
@@ -46,11 +47,12 @@ export default function IndustryBanner() {
               visible: { opacity: 1, y: 0 },
             }}
             className="inline-block"
+            aria-hidden="true"
           >
             {char === ' ' ? '\u00A0' : char}
           </motion.span>
         ))}
-      </motion.div>
+      </motion.h1>
     </div>
   );
 }
