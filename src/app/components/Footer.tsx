@@ -47,7 +47,7 @@ export default function Footer() {
          
 
           <div>
-            <h3 className="font-light text-2xl mb-4">Industries</h3>
+            <p className="font-light text-2xl mb-4">Industries</p>
             <ul className="space-y-2 text-gray-400">
               <li><a href="/industry/">Beauty</a></li>
               <li><a href="/industry/">Healthcare</a></li>
@@ -62,7 +62,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-light text-2xl mb-4">Services</h3>
+            <p className="font-light text-2xl mb-4">Services</p>
             <ul className="space-y-2 text-gray-400">
               <li><Link href="/services/">Branding</Link></li>
               <li><Link href="/services/">Marketing</Link></li>
@@ -75,7 +75,7 @@ export default function Footer() {
           </div>
 
            <div>
-            <h3 className="font-light text-2xl mb-4">Company</h3>
+            <p className="font-light text-2xl mb-4">Company</p>
             <ul className="space-y-2 text-gray-400">
               <li><Link href="/">Home</Link></li>
               <li><Link href="/services/">Services</Link></li>
@@ -92,7 +92,7 @@ export default function Footer() {
           
 
           <div className="col-span-2 md:col-span-1 lg:col-span-1">
-            <h3 className="font-light text-2xl mb-4">Connect</h3>
+            <p className="font-light text-2xl mb-4">Connect</p>
             <ul className="space-y-2 text-gray-400">
               <li>General Enquiry : <Link href="tel:+64 20 446 6444">+64 20 446 6444</Link></li>
               <li>Email : <Link href="mailto:info@brandalchemy.co.nz">info@brandalchemy.co.nz</Link> </li>

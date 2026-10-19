@@ -138,7 +138,7 @@ export default function Stacked3DSections() {
     const ctx = gsap.context(() => {
       gsap.utils.toArray('.stack-panel').forEach((panel) => {
         const element = panel as HTMLElement;
-        const title = element.querySelector('h2');
+        const title = element.querySelector('h3');
         const paragraph = element.querySelector('p');
         const items = element.querySelectorAll('.list-items');
         const video = element.querySelector('video');
@@ -208,9 +208,9 @@ export default function Stacked3DSections() {
             className="z-10 text-center px-6 max-w-4xl"
             style={{ transformStyle: 'preserve-3d' }}
           >
-            <h2 className="text-4xl md:text-5xl font-light mb-2">
+            <h3 className="text-4xl md:text-5xl font-light mb-2">
               {section.title}
-            </h2>
+            </h3>
             <p className="text-sm md:text-lg mb-2">{section.description}</p>
             <div className="flex flex-wrap justify-center gap-4">
               {section.items.map((item, idx) => {
@@ -221,7 +221,7 @@ export default function Stacked3DSections() {
                     className="flex items-center gap-2 border border-white rounded-4xl px-5 py-1 list-items"
                   >
                     {Icon && <Icon className="text-xl" />}
-                    <span>{item.label}</span>
+                    <h4>{item.label}</h4>
                   </div>
                 );
               })}
