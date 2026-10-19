@@ -15,6 +15,18 @@ export const metadata: Metadata = {
     template: "%s – Brand Alchemy",
   },
   description: "Creative. Design. Brand Agency New Zealand",
+  keywords: [
+    "Brand Alchemy",
+    "creative agency NZ",
+    "design agency New Zealand",
+    "brand identity",
+    "digital marketing",
+    "custom website design",
+    "brand strategy",
+    "video production",
+    "Auckland branding agency",
+    "software development",
+  ],
   openGraph: {
     siteName: SITE_NAME,
     locale: "en_NZ",
