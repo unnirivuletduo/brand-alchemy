@@ -144,7 +144,7 @@ export default function ContactPage() {
 
       {/* Form Section */}
       <div className="min-h-screen bg-white text-black px-6 lg:px-20 py-20">
-        <div className="max-w-6xl mx-auto grid gap-12 lg:grid-cols-[2fr_3fr] lg:gap-20">
+        <div className="max-w-6xl mx-auto grid gap-12 lg:grid-cols-2 lg:gap-16">
 
         {/* Contact details */}
         <div>
@@ -173,7 +173,7 @@ export default function ContactPage() {
           </ul>
 
           <p className="text-sm text-gray-500 mb-4">Follow us</p>
-          <ul className="flex flex-wrap gap-3">
+          <ul className="flex flex-wrap gap-3 lg:flex-nowrap lg:gap-2">
             {socialLinks.map(({ name, href, Icon }) => (
               <li key={name}>
                 <a
@@ -182,7 +182,7 @@ export default function ContactPage() {
                   rel="noopener noreferrer"
                   aria-label={name}
                   title={name}
-                  className="flex h-11 w-11 items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-black hover:text-white hover:border-black transition"
+                  className="flex h-11 w-11 lg:h-10 lg:w-10 items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-black hover:text-white hover:border-black transition"
                 >
                   <Icon />
                 </a>
