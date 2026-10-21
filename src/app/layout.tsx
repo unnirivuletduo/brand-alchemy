@@ -45,6 +45,24 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en-NZ">
       <head>
+        {/* Google tag (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-8RY5G23Y8G"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-8RY5G23Y8G');
+            `,
+          }}
+        />
+
         {/* Meta Pixel Code */}
         <Script
           id="facebook-pixel"
