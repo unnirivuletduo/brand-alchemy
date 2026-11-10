@@ -19,7 +19,8 @@ export default function IndustryBanner() {
         <Image
         width="1920" height="600"
           src="/images/industry-banner.jpg"
-          alt="Industry Banner"
+          alt="Brand Alchemy branding services banner representing logo design, brand identity, and strategy solutions in New Zealand"
+          title="Brand Alchemy – Branding Services Banner"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/50" />

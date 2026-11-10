@@ -59,7 +59,8 @@ const toggle = (index: number): void => {
             <div className="absolute inset-0 z-0">
               <Image width="1920" height="600"
                 src="/images/industry-banner.jpg"
-                alt="Industry Banner"
+                alt="Brand Alchemy about us banner introducing the creative team and story behind our branding and design agency in New Zealand"
+                title="Brand Alchemy – About Us Banner"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-black/50" />
