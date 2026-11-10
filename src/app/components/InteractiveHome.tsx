@@ -15,16 +15,22 @@ const repeatedSections = [
     title: 'Own',
     paragraph: 'Owning a brand means taking control of how the world sees you. At Brand Alchemy, we help you claim that space with clarity, purpose, and confidence. Every detail, from your logo to your voice, is designed to reflect who you are and what you stand for.',
     image: '/images/creative.png',
+    imageTitle: 'Brand Alchemy – Creative Design & Digital Brand Solutions',
+    imageAlt: 'Brand Alchemy creative agency showcase highlighting design and brand identity services in New Zealand',
   },
   {
     title: 'Your',
     paragraph: 'Your brand is more than visuals — it’s your story, your values, and your connection with people. We don’t deliver templates or one-size-fits-all design. Instead, we craft solutions tailored to your journey, ensuring your brand feels personal, authentic, and built around what makes you unique.',
     image: '/images/develop.png',
+    imageTitle: 'Brand Alchemy – Custom Web & Software Development Solutions',
+    imageAlt: 'Brand Alchemy software and web development services banner showcasing custom digital solutions',
   },
   {
     title: 'Identity',
     paragraph: 'Identity is where design and strategy come together. It’s what gives your business recognition, credibility, and influence. We create identities built to endure, evolve, and grow — guiding you from the birth of your brand to every step of its future.',
     image: '/images/launch.png',
+    imageTitle: 'Brand Alchemy – Launch-Ready Digital Campaigns & Marketing Solutions',
+    imageAlt: 'Brand Alchemy launch-ready graphics and performance marketing strategies in New Zealand',
   },
 ];
 
@@ -163,7 +169,7 @@ export default function InteractiveHome() {
       </p>
 
       {/* Repeated sections */}
-      {repeatedSections.map(({ title, paragraph, image }, i) => (
+      {repeatedSections.map(({ title, paragraph, image, imageTitle, imageAlt }, i) => (
         <div
           key={i}
           ref={addSectionRef}
@@ -172,7 +178,8 @@ export default function InteractiveHome() {
         > <figure>
             <Image
             src={image}
-            alt={title}
+            alt={imageAlt}
+            title={imageTitle}
             className="w-64"
             draggable={false}
             width="1000"

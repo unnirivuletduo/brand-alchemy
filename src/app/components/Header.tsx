@@ -45,7 +45,8 @@ export default function Header() {
         <Link href="/" className="logo-ba">
           <Image 
             src="/logo.png"
-            alt="Brand Alchemy Logo"
+            alt="Brand Alchemy – Creative, Design & Brand Agency NZ Logo"
+            title="Brand Alchemy Official Agency Logo"
             width={100}
             height={100}
           />
@@ -89,7 +90,8 @@ export default function Header() {
           <Image 
            className="pl-5"
             src="/logo.png"
-            alt="Brand Alchemy Logo"
+            alt="Brand Alchemy – Creative, Design & Brand Agency NZ Logo"
+            title="Brand Alchemy Official Agency Logo"
             width={100}
             height={100}
           />

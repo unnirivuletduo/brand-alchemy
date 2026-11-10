@@ -65,7 +65,8 @@ export default function CareersPage() {
             width={1920}
             height={600}
             src="/images/industry-banner.jpg"
-            alt="Industry Banner"
+            alt="Brand Alchemy careers banner inviting creative and digital professionals to explore open positions at our agency in New Zealand"
+            title="Brand Alchemy – Careers Banner"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/50" />

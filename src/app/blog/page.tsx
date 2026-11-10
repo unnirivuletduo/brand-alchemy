@@ -31,7 +31,8 @@ export default async function BlogPage() {
             width={1920}
             height={600}
             src="/images/industry-banner.jpg"
-            alt="Industry Banner"
+            alt="Brand Alchemy blog banner featuring insights and articles on branding, design, and digital marketing in New Zealand"
+            title="Brand Alchemy – Insights & Articles Banner"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/50" />
