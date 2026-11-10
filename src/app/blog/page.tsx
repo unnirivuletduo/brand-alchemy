@@ -16,6 +16,10 @@ export function generateMetadata() {
 
 const title = 'Insights & Articles';
 
+// Refresh the post list every 60 seconds, including after a build that
+// could not reach WordPress.
+export const revalidate = 60;
+
 export default async function BlogPage() {
   const posts = await getPosts();
 
@@ -48,6 +52,12 @@ export default async function BlogPage() {
         <h1 className="text-4xl font-light mb-10 text-center">
           Insights & Articles
         </h1>
+
+        {posts.length === 0 && (
+          <p className="text-center text-gray-500">
+            New articles are on their way. Please check back soon.
+          </p>
+        )}
 
         <div className="grid md:grid-cols-2 gap-10">
           {posts.map((post: any) => {
